@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import heroImage1 from "./assets/images/hero/gesture-interaction-main.png";
 import heroImage2 from "./assets/images/hero/gesture-touchdesign.png";
 
-// gesture-interaction 專案頁素材
 import gestureDetail1 from "./assets/images/projects/gesture-interaction/detail-1.png";
 import gestureDemo from "./assets/images/projects/gesture-interaction/demo.gif";
 
@@ -29,8 +28,6 @@ export default function ProjectsPage() {
   const [lang, setLang] = useState<Lang>("zh");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
   const location = useLocation();
-
-  // 只給 gesture-interaction 用的圖片輪播 index
   const [gestureImageIndex, setGestureImageIndex] = useState(0);
 
   const gestureImages = [gestureDetail1, gestureDemo];
@@ -81,36 +78,28 @@ export default function ProjectsPage() {
       hero: {
         eyebrow: "PROJECT ARCHIVE",
         title: "專案整理",
-        text: "這裡收錄我將想法轉化為體驗、工具與流程的專案實作。",
-      },
-      labels: {
-        background: "專案背景",
-        problem: "問題",
-        solution: "體驗流程",
-        role: "我的角色",
-        reflection: "收穫 / Reflection",
       },
       backToHome: "返回首頁",
+      introLabel: "專案介紹",
       projects: [
         {
           id: "gesture-interaction",
           tag: "Interactive Experience",
           title: "手勢互動體驗｜情緒覺察",
-          summary: "結合實體票券、數位互動與手勢操作，將抽象情緒轉化為可被看見與感受的變化。",
+          summary:
+            "結合實體票券、數位互動與手勢操作，將抽象情緒轉化為可被看見與感受的變化。",
           imageType: "image",
           imageSrc: heroImage1,
           accent: "#3FAF68",
           monogram: "GI",
           background:
-            "在與人生教練合辦的活動中，我設計了一套結合「實體票券」與「數位互動」的體驗流程。",
-          problem:
-            "希望把原本抽象、不容易被描述的情緒覺察，轉化成參與者可以在現場直接感受、看見並互動的體驗。",
+            "在與人生教練合辦的活動中，\n我設計了一套結合「實體票券」與「數位互動」的體驗流程，",
+          problem: "",
           solution:
-            "參與者透過票券上的條碼對準現場電腦鏡頭，我透過手機進行遠端控制，作為互動流程的控制端，並結合手勢操作即時影響畫面中的角色狀態，讓「抽象情緒」轉化為可以被看見與感受的變化。整體體驗串連「進場 → 互動 → 結束」，形成一個完整的參與流程。",
-          role:
-            "我負責整體體驗流程設計、互動邏輯規劃、條碼票券與數位畫面的串接概念，以及現場互動控制方式的設計。",
+            "參與者透過票券上的條碼對準現場電腦鏡頭，\n我透過手機進行遠端控制，作為互動流程的控制端，\n並結合手勢操作即時影響畫面中的角色狀態\n讓「抽象情緒」轉化為可以被看見與感受的變化。",
+          role: "",
           reflection:
-            "這個專案讓我更確認自己擅長把抽象概念轉化成可被體驗的互動形式，也讓我更理解實體場域、流程安排與數位互動之間如何彼此配合。",
+            "整體體驗串連「進場 → 互動 → 結束」，\n形成一個完整的參與流程。",
         },
         {
           id: "interactive-exhibition",
@@ -210,16 +199,9 @@ export default function ProjectsPage() {
       hero: {
         eyebrow: "PROJECT ARCHIVE",
         title: "Projects",
-        text: "A collection of projects where I turn ideas into experiences, tools, and workable systems.",
-      },
-      labels: {
-        background: "Background",
-        problem: "Goal",
-        solution: "Experience Flow",
-        role: "My Role",
-        reflection: "Reflection",
       },
       backToHome: "Back to Home",
+      introLabel: "Project Overview",
       projects: [
         {
           id: "gesture-interaction",
@@ -232,15 +214,13 @@ export default function ProjectsPage() {
           accent: "#3FAF68",
           monogram: "GI",
           background:
-            "In a co-hosted event with a life coach, I designed an experience flow that combined physical tickets with digital interaction.",
-          problem:
-            "The goal was to transform abstract emotional awareness into something participants could directly see, feel, and engage with on site.",
+            "In a co-hosted event with a life coach,\nI designed an experience flow that combined physical tickets and digital interaction.",
+          problem: "",
           solution:
-            "Participants aimed the barcode on their ticket at the on-site computer camera. I used my phone as the remote control side of the interaction flow, and combined gesture input to affect the character’s state on screen in real time. This turned abstract emotions into visible and experiential changes. The whole experience connected entry, interaction, and ending into a complete participation flow.",
-          role:
-            "I was responsible for the overall experience flow design, interaction logic planning, the concept linking barcode tickets with digital visuals, and the design of the on-site interaction control method.",
+            "Participants aligned the barcode on their ticket with the on-site computer camera.\nI used my phone as the remote control side of the interaction flow,\nand combined gesture input to affect the character state on screen in real time,\nturning abstract emotions into visible and perceivable changes.",
+          role: "",
           reflection:
-            "This project made me more certain that I am good at translating abstract concepts into interactive experiences, and helped me better understand how physical context, flow design, and digital interaction can work together.",
+            "The whole experience connected entry → interaction → ending,\nforming a complete participation flow.",
         },
         {
           id: "interactive-exhibition",
@@ -358,7 +338,7 @@ export default function ProjectsPage() {
             width: "100%",
             height: "100%",
             minHeight: isMobile ? "260px" : "420px",
-            backgroundColor: "#111",
+            backgroundColor: "#f2efe9",
           }}
         >
           <img
@@ -383,10 +363,10 @@ export default function ProjectsPage() {
               width: "42px",
               height: "42px",
               borderRadius: "999px",
-              border: "1px solid rgba(255,255,255,0.24)",
-              backgroundColor: "rgba(255,255,255,0.14)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              backgroundColor: "rgba(86, 126, 172, 0.72)",
               backdropFilter: "blur(8px)",
-              color: "rgba(255,255,255,0.9)",
+              color: "#ffffff",
               fontSize: "18px",
               cursor: "pointer",
               display: "flex",
@@ -409,10 +389,10 @@ export default function ProjectsPage() {
               width: "42px",
               height: "42px",
               borderRadius: "999px",
-              border: "1px solid rgba(255,255,255,0.24)",
-              backgroundColor: "rgba(255,255,255,0.14)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              backgroundColor: "rgba(86, 126, 172, 0.72)",
               backdropFilter: "blur(8px)",
-              color: "rgba(255,255,255,0.9)",
+              color: "#ffffff",
               fontSize: "18px",
               cursor: "pointer",
               display: "flex",
@@ -434,7 +414,7 @@ export default function ProjectsPage() {
               gap: "8px",
               padding: "6px 10px",
               borderRadius: "999px",
-              backgroundColor: "rgba(0,0,0,0.22)",
+              backgroundColor: "rgba(0,0,0,0.18)",
               backdropFilter: "blur(6px)",
             }}
           >
@@ -629,62 +609,39 @@ export default function ProjectsPage() {
           style={{
             maxWidth: "980px",
             margin: "0 auto",
-            padding: isMobile ? "28px 18px 28px" : "42px 24px 34px",
+            padding: isMobile ? "28px 18px 18px" : "42px 24px 24px",
+            textAlign: "center",
           }}
         >
           <div
             style={{
-              background: "rgba(255,255,255,0.58)",
-              border: "1px solid rgba(70,60,45,0.06)",
-              borderRadius: isMobile ? "28px" : "34px",
-              padding: isMobile ? "24px 20px" : "30px 32px",
-              boxShadow: "0 14px 40px rgba(81, 64, 42, 0.06)",
-              textAlign: "center",
+              display: "inline-block",
+              padding: "9px 16px",
+              borderRadius: "999px",
+              backgroundColor: "#ece3d5",
+              color: "#746652",
+              fontSize: "12px",
+              letterSpacing: "0.16em",
+              lineHeight: 1.4,
+              fontWeight: 600,
+              marginBottom: "16px",
             }}
           >
-            <div
-              style={{
-                display: "inline-block",
-                padding: "9px 16px",
-                borderRadius: "999px",
-                backgroundColor: "#ece3d5",
-                color: "#746652",
-                fontSize: "12px",
-                letterSpacing: "0.16em",
-                lineHeight: 1.4,
-                fontWeight: 600,
-                marginBottom: "16px",
-              }}
-            >
-              {t.hero.eyebrow}
-            </div>
-
-            <h1
-              style={{
-                margin: "0 0 14px 0",
-                fontSize: isMobile ? "32px" : "44px",
-                lineHeight: 1.1,
-                color: "#2a2a2a",
-                fontFamily:
-                  "'Times New Roman', Georgia, 'Noto Serif TC', serif",
-              }}
-            >
-              {t.hero.title}
-            </h1>
-
-            <p
-              style={{
-                margin: 0,
-                fontSize: isMobile ? "17px" : "18px",
-                lineHeight: 1.8,
-                color: "#5b5750",
-                maxWidth: "720px",
-                marginInline: "auto",
-              }}
-            >
-              {t.hero.text}
-            </p>
+            {t.hero.eyebrow}
           </div>
+
+          <h1
+            style={{
+              margin: 0,
+              fontSize: isMobile ? "32px" : "44px",
+              lineHeight: 1.1,
+              color: "#1f2f44",
+              fontFamily:
+                "'Times New Roman', Georgia, 'Noto Serif TC', serif",
+            }}
+          >
+            {t.hero.title}
+          </h1>
         </section>
 
         <section
@@ -696,216 +653,321 @@ export default function ProjectsPage() {
             gap: isMobile ? "18px" : "24px",
           }}
         >
-          {t.projects.map((project) => (
-            <article
-              key={project.id}
-              id={project.id}
-              style={{
-                backgroundColor: "rgba(255,255,255,0.76)",
-                borderRadius: isMobile ? "24px" : "28px",
-                border: "1px solid rgba(70,60,45,0.06)",
-                boxShadow: "0 10px 28px rgba(81, 64, 42, 0.05)",
-                overflow: "hidden",
-                scrollMarginTop: "110px",
-              }}
-            >
-              <div
+          {t.projects.map((project) => {
+            const isGestureProject = project.id === "gesture-interaction";
+
+            return (
+              <article
+                key={project.id}
+                id={project.id}
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: isMobile ? "1fr" : "1.08fr 0.92fr",
-                  alignItems: "stretch",
+                  backgroundColor: "rgba(255,255,255,0.78)",
+                  borderRadius: isMobile ? "24px" : "28px",
+                  border: "1px solid rgba(70,60,45,0.06)",
+                  boxShadow: "0 10px 28px rgba(81, 64, 42, 0.05)",
+                  overflow: "hidden",
+                  scrollMarginTop: "110px",
                 }}
               >
                 <div
                   style={{
-                    position: "relative",
-                    minHeight: isMobile ? "260px" : "100%",
-                    background:
-                      project.imageType === "placeholder"
-                        ? `linear-gradient(160deg, ${project.accent}20 0%, rgba(255,255,255,0.78) 48%, #efe8dc 100%)`
-                        : "#111",
-                  }}
-                >
-                  {renderProjectMedia(project)}
-
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "16px",
-                      top: "16px",
-                      display: "inline-block",
-                      padding: "7px 11px",
-                      borderRadius: "999px",
-                      backgroundColor: "rgba(255,255,255,0.78)",
-                      backdropFilter: "blur(8px)",
-                      color: "#6c6358",
-                      fontSize: "11px",
-                      fontWeight: 700,
-                      letterSpacing: "0.08em",
-                    }}
-                  >
-                    {project.tag}
-                  </div>
-                </div>
-
-                <div
-                  style={{
-                    padding: isMobile ? "22px 20px" : "28px 28px 26px",
                     display: "grid",
-                    gap: "18px",
-                    alignContent: "start",
+                    gridTemplateColumns: isMobile ? "1fr" : "1.08fr 0.92fr",
+                    alignItems: "stretch",
                   }}
                 >
-                  <div>
-                    <h2
-                      style={{
-                        margin: "0 0 10px 0",
-                        fontSize: isMobile ? "28px" : "34px",
-                        lineHeight: 1.15,
-                        color: "#232323",
-                      }}
-                    >
-                      {project.title}
-                    </h2>
+                  <div
+                    style={{
+                      position: "relative",
+                      minHeight: isMobile ? "260px" : "100%",
+                      background:
+                        project.imageType === "placeholder"
+                          ? `linear-gradient(160deg, ${project.accent}20 0%, rgba(255,255,255,0.78) 48%, #efe8dc 100%)`
+                          : "#f2efe9",
+                    }}
+                  >
+                    {renderProjectMedia(project)}
 
-                    <p
+                    <div
                       style={{
-                        margin: 0,
-                        fontSize: isMobile ? "16px" : "17px",
-                        lineHeight: 1.85,
-                        color: "#5b5750",
-                        fontWeight: 600,
+                        position: "absolute",
+                        left: "16px",
+                        top: "16px",
+                        display: "inline-block",
+                        padding: "8px 14px",
+                        borderRadius: "999px",
+                        backgroundColor: "rgba(255,255,255,0.94)",
+                        color: "#6c6358",
+                        fontSize: "12px",
+                        fontWeight: 700,
+                        letterSpacing: "0.06em",
+                        boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+                        border: "1px solid rgba(70,60,45,0.08)",
                       }}
                     >
-                      {project.summary}
-                    </p>
+                      {project.tag}
+                    </div>
                   </div>
 
                   <div
                     style={{
+                      padding: isMobile ? "26px 20px" : "34px 36px 34px",
                       display: "grid",
-                      gap: "14px",
+                      gap: isGestureProject ? "28px" : "20px",
+                      alignContent: "start",
+                      textAlign: "left",
                     }}
                   >
-                    <div>
-                      <h3
+                    <div style={{ textAlign: "left" }}>
+                      <h2
                         style={{
-                          margin: "0 0 8px 0",
-                          fontSize: "16px",
-                          color: "#1f1f1f",
+                          margin: "0 0 14px 0",
+                          fontSize: isMobile ? "30px" : "40px",
+                          lineHeight: 1.15,
+                          color: "#1f2f44",
+                          fontWeight: 700,
+                          letterSpacing: "-0.02em",
+                          textAlign: "left",
                         }}
                       >
-                        {t.labels.background}
-                      </h3>
+                        {project.title}
+                      </h2>
+
                       <p
                         style={{
                           margin: 0,
-                          fontSize: "15px",
-                          lineHeight: 1.85,
-                          color: "#5b5750",
-                          whiteSpace: "pre-line",
+                          fontSize: isMobile ? "16px" : "17px",
+                          lineHeight: 1.95,
+                          color: "#6b655d",
+                          fontWeight: 400,
+                          textAlign: "left",
+                          maxWidth: "540px",
                         }}
                       >
-                        {project.background}
+                        {project.summary}
                       </p>
                     </div>
 
-                    <div>
-                      <h3
+                    {isGestureProject ? (
+                      <div
                         style={{
-                          margin: "0 0 8px 0",
-                          fontSize: "16px",
-                          color: "#1f1f1f",
+                          display: "grid",
+                          gap: "18px",
+                          textAlign: "left",
                         }}
                       >
-                        {t.labels.problem}
-                      </h3>
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: "15px",
-                          lineHeight: 1.85,
-                          color: "#5b5750",
-                          whiteSpace: "pre-line",
-                        }}
-                      >
-                        {project.problem}
-                      </p>
-                    </div>
+                        <h3
+                          style={{
+                            margin: 0,
+                            fontSize: "16px",
+                            lineHeight: 1.4,
+                            color: "#2d2d2d",
+                            fontWeight: 600,
+                            letterSpacing: "0.02em",
+                            textAlign: "left",
+                          }}
+                        >
+                          {t.introLabel}
+                        </h3>
 
-                    <div>
-                      <h3
-                        style={{
-                          margin: "0 0 8px 0",
-                          fontSize: "16px",
-                          color: "#1f1f1f",
-                        }}
-                      >
-                        {t.labels.solution}
-                      </h3>
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: "15px",
-                          lineHeight: 1.85,
-                          color: "#5b5750",
-                          whiteSpace: "pre-line",
-                        }}
-                      >
-                        {project.solution}
-                      </p>
-                    </div>
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "16px",
+                            lineHeight: 2.05,
+                            color: "#4f4a43",
+                            whiteSpace: "pre-line",
+                            textAlign: "left",
+                          }}
+                        >
+                          {project.background}
+                        </p>
 
-                    <div>
-                      <h3
-                        style={{
-                          margin: "0 0 8px 0",
-                          fontSize: "16px",
-                          color: "#1f1f1f",
-                        }}
-                      >
-                        {t.labels.role}
-                      </h3>
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: "15px",
-                          lineHeight: 1.85,
-                          color: "#5b5750",
-                          whiteSpace: "pre-line",
-                        }}
-                      >
-                        {project.role}
-                      </p>
-                    </div>
+                        <div
+                          style={{
+                            width: "36px",
+                            height: "1px",
+                            backgroundColor: "rgba(95, 86, 74, 0.28)",
+                          }}
+                        />
 
-                    <div>
-                      <h3
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "16px",
+                            lineHeight: 2.05,
+                            color: "#4f4a43",
+                            whiteSpace: "pre-line",
+                            textAlign: "left",
+                          }}
+                        >
+                          {project.solution}
+                        </p>
+
+                        <div
+                          style={{
+                            width: "36px",
+                            height: "1px",
+                            backgroundColor: "rgba(95, 86, 74, 0.28)",
+                          }}
+                        />
+
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "16px",
+                            lineHeight: 2.05,
+                            color: "#4f4a43",
+                            whiteSpace: "pre-line",
+                            textAlign: "left",
+                          }}
+                        >
+                          {project.reflection}
+                        </p>
+                      </div>
+                    ) : (
+                      <div
                         style={{
-                          margin: "0 0 8px 0",
-                          fontSize: "16px",
-                          color: "#1f1f1f",
+                          display: "grid",
+                          gap: "14px",
                         }}
                       >
-                        {t.labels.reflection}
-                      </h3>
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: "15px",
-                          lineHeight: 1.85,
-                          color: "#5b5750",
-                          whiteSpace: "pre-line",
-                        }}
-                      >
-                        {project.reflection}
-                      </p>
-                    </div>
+                        <div>
+                          <h3
+                            style={{
+                              margin: "0 0 8px 0",
+                              fontSize: "16px",
+                              color: "#1f1f1f",
+                              fontWeight: 600,
+                              textAlign: "left",
+                            }}
+                          >
+                            背景
+                          </h3>
+                          <p
+                            style={{
+                              margin: 0,
+                              fontSize: "15px",
+                              lineHeight: 1.9,
+                              color: "#5b5750",
+                              whiteSpace: "pre-line",
+                              textAlign: "left",
+                            }}
+                          >
+                            {project.background}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3
+                            style={{
+                              margin: "0 0 8px 0",
+                              fontSize: "16px",
+                              color: "#1f1f1f",
+                              fontWeight: 600,
+                              textAlign: "left",
+                            }}
+                          >
+                            問題
+                          </h3>
+                          <p
+                            style={{
+                              margin: 0,
+                              fontSize: "15px",
+                              lineHeight: 1.9,
+                              color: "#5b5750",
+                              whiteSpace: "pre-line",
+                              textAlign: "left",
+                            }}
+                          >
+                            {project.problem}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3
+                            style={{
+                              margin: "0 0 8px 0",
+                              fontSize: "16px",
+                              color: "#1f1f1f",
+                              fontWeight: 600,
+                              textAlign: "left",
+                            }}
+                          >
+                            解法
+                          </h3>
+                          <p
+                            style={{
+                              margin: 0,
+                              fontSize: "15px",
+                              lineHeight: 1.9,
+                              color: "#5b5750",
+                              whiteSpace: "pre-line",
+                              textAlign: "left",
+                            }}
+                          >
+                            {project.solution}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3
+                            style={{
+                              margin: "0 0 8px 0",
+                              fontSize: "16px",
+                              color: "#1f1f1f",
+                              fontWeight: 600,
+                              textAlign: "left",
+                            }}
+                          >
+                            我的角色
+                          </h3>
+                          <p
+                            style={{
+                              margin: 0,
+                              fontSize: "15px",
+                              lineHeight: 1.9,
+                              color: "#5b5750",
+                              whiteSpace: "pre-line",
+                              textAlign: "left",
+                            }}
+                          >
+                            {project.role}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3
+                            style={{
+                              margin: "0 0 8px 0",
+                              fontSize: "16px",
+                              color: "#1f1f1f",
+                              fontWeight: 600,
+                              textAlign: "left",
+                            }}
+                          >
+                            Reflection
+                          </h3>
+                          <p
+                            style={{
+                              margin: 0,
+                              fontSize: "15px",
+                              lineHeight: 1.9,
+                              color: "#5b5750",
+                              whiteSpace: "pre-line",
+                              textAlign: "left",
+                            }}
+                          >
+                            {project.reflection}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </section>
       </main>
     </div>
