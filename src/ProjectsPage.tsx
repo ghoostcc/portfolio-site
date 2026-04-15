@@ -124,7 +124,7 @@ export default function ProjectsPage() {
           introBlocks: [
             "在 TouchDesigner 工作坊中，\n我以「我所觀看的風景」與「我是誰」為主題，\n嘗試將個人的感受轉化為可被操作的互動視覺。",
             "我以現場的方盒子作為載體進行 mapping，\n讓畫面不只是呈現，而是與空間產生關係，\n成為一個可以被觀看與參與的展演裝置。",
-            "整體設計包含三個主要互動：\n\n1. 啟動機制  \n透過手機遙控觸發，作為整個展演的開始，\n讓觀眾從一個明確的「進入點」進入體驗。\n\n2. 風景互動  \n將台中地標轉化為視覺素材，\n觀眾可以透過手勢切換畫面，並進行放大與縮小，\n在互動中重新觀看熟悉的風景。\n\n3. 藝術表達  \n透過手機觸控操作，在畫面中生成筆觸，\n讓使用者能直接在作品上留下痕跡，\n形成一種即時的創作與參與。",
+            "整體設計包含三個主要互動：\n\n1. 啟動機制\n透過手機遙控觸發，作為整個展演的開始，\n讓觀眾從一個明確的「進入點」進入體驗。\n\n2. 風景互動\n將台中地標轉化為視覺素材，\n觀眾可以透過手勢切換畫面，並進行放大與縮小，\n在互動中重新觀看熟悉的風景。\n\n3. 藝術表達\n透過手機觸控操作，在畫面中生成筆觸，\n讓使用者能直接在作品上留下痕跡，\n形成一種即時的創作與參與。",
           ],
         },
         {
@@ -318,7 +318,8 @@ export default function ProjectsPage() {
     const total = projectImages[projectId]?.length || 1;
     setImageIndexes((prev) => ({
       ...prev,
-      [projectId]: (prev[projectId] ?? 0) === 0 ? total - 1 : (prev[projectId] ?? 0) - 1,
+      [projectId]:
+        (prev[projectId] ?? 0) === 0 ? total - 1 : (prev[projectId] ?? 0) - 1,
     }));
   };
 
@@ -579,7 +580,8 @@ export default function ProjectsPage() {
               fontSize: isMobile ? "32px" : "44px",
               lineHeight: 1.1,
               color: "#1f2f44",
-              fontFamily: "'Times New Roman', Georgia, 'Noto Serif TC', serif",
+              fontFamily:
+                "'Times New Roman', Georgia, 'Noto Serif TC', serif",
             }}
           >
             {t.hero.title}
@@ -723,6 +725,7 @@ export default function ProjectsPage() {
                         >
                           {t.instagramLabel}
                         </span>
+
                         <a
                           href={project.instagramLink}
                           target="_blank"
