@@ -5,6 +5,9 @@ import heroImage2 from "./assets/images/hero/gesture-touchdesign.png";
 import aboutMeImage from "./assets/images/about me/me.jpg";
 import aboutLearningDetail1 from "./assets/images/about me/detail-1.png";
 import aboutLearningDetail2 from "./assets/images/about me/detail-2.png";
+import coverImage1 from "./assets/images/hero/cover-1.png";
+import coverImage2 from "./assets/images/hero/cover-2.png";
+import coverImage6 from "./assets/images/hero/cover-6.png";
 
 type Lang = "zh" | "en";
 
@@ -102,26 +105,28 @@ export default function HomePage() {
           description: "把情緒覺察轉成可即時互動的體驗 prototype。",
           button: "More",
           imageType: "image",
-          imageSrc: heroImage1,
+          imageSrc: coverImage1,
           accent: "#3FAF68",
           monogram: "GI",
           targetId: "gesture-interaction",
         },
         {
           tag: "Experience Design",
-          title: "互動展演現場",
-          description: "把數位互動放進真實場景，讓人能實際參與與感受。",
+          title: "互動視覺實驗",
+          description:
+            "以風景與自我為主題的即時互動展演\n\n透過 TouchDesigner 建構視覺與互動系統，\n讓畫面能隨手勢與操作即時變化。",
           button: "More",
           imageType: "image",
-          imageSrc: heroImage2,
+          imageSrc: coverImage2,
           accent: "#8D63D2",
           monogram: "EX",
           targetId: "interactive-exhibition",
         },
         {
           tag: "Community System",
-          title: "Discord 社群配對系統",
-          description: "協助活動分組與流程執行更順暢的社群工具。",
+          title: "社群配對系統",
+          description:
+            "設計活動中的配對流程與邏輯系統\n\n透過自動化與資料管理，\n讓配對更穩定且可持續運作。",
           button: "More",
           imageType: "placeholder",
           accent: "#4B84D9",
@@ -130,8 +135,9 @@ export default function HomePage() {
         },
         {
           tag: "Workflow Tool",
-          title: "逢甲大學請假回報系統",
-          description: "把行政流程整理成更清楚、可執行的回報機制。",
+          title: "請假回報系統",
+          description:
+            "優化行政流程，減少溝通與操作成本\n\n透過自動化與資料整合，\n讓請假申請與通知更即時且直覺。",
           button: "More",
           imageType: "placeholder",
           accent: "#B1784F",
@@ -141,7 +147,8 @@ export default function HomePage() {
         {
           tag: "Automation",
           title: "個人自動化工具",
-          description: "從真實使用情境出發，持續優化個人工作流。",
+          description:
+            "從真實需求出發設計個人工作流\n\n整合多種工具，\n建立可持續使用的閱讀與知識管理系統。",
           button: "More",
           imageType: "placeholder",
           accent: "#3C9D94",
@@ -150,10 +157,12 @@ export default function HomePage() {
         },
         {
           tag: "Brand / Event",
-          title: "e-casso 藝術品牌",
-          description: "把抽象主題轉成可以參與、創作與感受的體驗。",
+          title: "E-casso 藝術品牌",
+          description:
+            "將不同主題轉化為可參與的體驗\n\n透過藝術與跨領域結合，\n設計具有互動與回饋的活動形式。",
           button: "More",
-          imageType: "placeholder",
+          imageType: "image",
+          imageSrc: coverImage6,
           accent: "#9A5ACB",
           monogram: "EC",
           targetId: "e-casso-art-brand",
@@ -234,28 +243,28 @@ export default function HomePage() {
             "An interactive prototype that turns emotional awareness into real-time experience.",
           button: "More",
           imageType: "image",
-          imageSrc: heroImage1,
+          imageSrc: coverImage1,
           accent: "#3FAF68",
           monogram: "GI",
           targetId: "gesture-interaction",
         },
         {
           tag: "Experience Design",
-          title: "Interactive Exhibition Scene",
+          title: "Interactive Visual Experiment",
           description:
-            "Bringing digital interaction into physical space for real participation.",
+            "A real-time interactive performance about landscape and self.\n\nBuilt with TouchDesigner to let visuals shift instantly through gesture and live control.",
           button: "More",
           imageType: "image",
-          imageSrc: heroImage2,
+          imageSrc: coverImage2,
           accent: "#8D63D2",
           monogram: "EX",
           targetId: "interactive-exhibition",
         },
         {
           tag: "Community System",
-          title: "Discord Matching System",
+          title: "Community Matching System",
           description:
-            "A community tool that helps event grouping and flow run more smoothly.",
+            "Designing the matching logic and flow for community events.\n\nUsing automation and data management to make matching more stable and sustainable.",
           button: "More",
           imageType: "placeholder",
           accent: "#4B84D9",
@@ -266,7 +275,7 @@ export default function HomePage() {
           tag: "Workflow Tool",
           title: "Leave Reporting System",
           description:
-            "A clearer and more workable reporting flow for administrative needs.",
+            "Optimizing administrative workflows to reduce communication and operation costs.\n\nUsing automation and data integration to make leave requests and notifications more immediate and intuitive.",
           button: "More",
           imageType: "placeholder",
           accent: "#B1784F",
@@ -277,7 +286,7 @@ export default function HomePage() {
           tag: "Automation",
           title: "Personal Automation Tools",
           description:
-            "Small tools built from real use cases to improve personal workflow.",
+            "Designing personal workflows from real everyday needs.\n\nCombining multiple tools to build a sustainable system for reading and knowledge management.",
           button: "More",
           imageType: "placeholder",
           accent: "#3C9D94",
@@ -286,11 +295,12 @@ export default function HomePage() {
         },
         {
           tag: "Brand / Event",
-          title: "e-casso Art Brand",
+          title: "E-casso Art Brand",
           description:
-            "Turning abstract topics into participatory and creative experiences.",
+            "Turning different themes into participatory experiences.\n\nCombining art with cross-disciplinary ideas to design interactive event formats with feedback and engagement.",
           button: "More",
-          imageType: "placeholder",
+          imageType: "image",
+          imageSrc: coverImage6,
           accent: "#9A5ACB",
           monogram: "EC",
           targetId: "e-casso-art-brand",
@@ -1069,6 +1079,7 @@ export default function HomePage() {
                           fontSize: "14px",
                           lineHeight: 1.75,
                           color: "#5b5750",
+                          whiteSpace: "pre-line",
                         }}
                       >
                         {project.description}
