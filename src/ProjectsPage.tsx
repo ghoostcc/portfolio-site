@@ -3,23 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 
 // gesture-interaction
 import gestureDetail1 from "./assets/images/projects/gesture-interaction/detail-1.png";
-import gestureDetail2 from "./assets/images/projects/gesture-interaction/detail-2.png";
 import gestureDemo from "./assets/images/projects/gesture-interaction/demo.gif";
 
 // interactive-exhibition
 import exhibitionDetail1 from "./assets/images/projects/interactive-exhibition/detail-1.png";
-import exhibitionDetail2 from "./assets/images/projects/interactive-exhibition/detail-2.png";
-import exhibitionDemo from "./assets/images/projects/interactive-exhibition/demo.gif";
 
 // discord-matching
 import discordDetail1 from "./assets/images/projects/discord-matching/detail-1.png";
-import discordDetail2 from "./assets/images/projects/discord-matching/detail-2.png";
-import discordDemo from "./assets/images/projects/discord-matching/demo.gif";
 
 // leave-system
 import leaveDetail1 from "./assets/images/projects/leave-system/detail-1.png";
-import leaveDetail2 from "./assets/images/projects/leave-system/detail-2.png";
-import leaveDemo from "./assets/images/projects/leave-system/demo.gif";
 
 // automation-tools
 import automationDetail1 from "./assets/images/projects/automation-tools/detail-1.png";
@@ -28,8 +21,6 @@ import automationDemo from "./assets/images/projects/automation-tools/demo.gif";
 
 // e-casso
 import ecassoDetail1 from "./assets/images/projects/e-casso/detail-1.png";
-import ecassoDetail2 from "./assets/images/projects/e-casso/detail-2.png";
-import ecassoDemo from "./assets/images/projects/e-casso/demo.gif";
 
 type Lang = "zh" | "en";
 
@@ -288,20 +279,16 @@ export default function ProjectsPage() {
 
   const projectImages = useMemo<Record<string, string[]>>(
     () => ({
-      "gesture-interaction": [gestureDetail1, gestureDetail2, gestureDemo],
-      "interactive-exhibition": [
-        exhibitionDetail1,
-        exhibitionDetail2,
-        exhibitionDemo,
-      ],
-      "discord-matching-system": [discordDetail1, discordDetail2, discordDemo],
-      "leave-reporting-system": [leaveDetail1, leaveDetail2, leaveDemo],
+      "gesture-interaction": [gestureDetail1, gestureDemo],
+      "interactive-exhibition": [exhibitionDetail1],
+      "discord-matching-system": [discordDetail1],
+      "leave-reporting-system": [leaveDetail1],
       "personal-automation-tools": [
         automationDetail1,
         automationDetail2,
         automationDemo,
       ],
-      "e-casso-art-brand": [ecassoDetail1, ecassoDetail2, ecassoDemo],
+      "e-casso-art-brand": [ecassoDetail1],
     }),
     []
   );
