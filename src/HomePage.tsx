@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import heroImage1 from "./assets/images/hero/gesture-interaction-main.png";
 import heroImage2 from "./assets/images/hero/gesture-touchdesign.png";
 import aboutMeImage from "./assets/images/about me/me.jpg";
+import aboutLearningDetail1 from "./assets/images/about me/detail-1.png";
+import aboutLearningDetail2 from "./assets/images/about me/detail-2.png";
 
 type Lang = "zh" | "en";
 
@@ -28,6 +30,7 @@ export default function HomePage() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [learningImageIndex, setLearningImageIndex] = useState(0);
 
   const projectScrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -347,12 +350,37 @@ export default function HomePage() {
     },
   ];
 
+  const learningImages = [
+    {
+      src: aboutLearningDetail1,
+      alt: lang === "zh" ? "學習與探索圖片 1" : "Learning and exploration image 1",
+    },
+    {
+      src: aboutLearningDetail2,
+      alt: lang === "zh" ? "學習與探索圖片 2" : "Learning and exploration image 2",
+    },
+  ];
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
   };
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
+  };
+
+  const nextLearningImage = () => {
+    setLearningImageIndex((prev) => (prev + 1) % learningImages.length);
+  };
+
+  const prevLearningImage = () => {
+    setLearningImageIndex((prev) =>
+      prev === 0 ? learningImages.length - 1 : prev - 1
+    );
+  };
+
+  const goToLearningImage = (index: number) => {
+    setLearningImageIndex(index);
   };
 
   return (
@@ -1317,20 +1345,116 @@ export default function HomePage() {
 
                 <div
                   style={{
+                    position: "relative",
                     aspectRatio: "3 / 2",
                     borderRadius: "20px",
                     backgroundColor: "#f0f1f3",
                     border: "1px solid rgba(0,0,0,0.05)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#8a847c",
-                    fontSize: "14px",
-                    fontWeight: 600,
-                    letterSpacing: "0.04em",
+                    overflow: "hidden",
                   }}
                 >
-                  IMAGE PLACEHOLDER
+                  <img
+                    src={learningImages[learningImageIndex].src}
+                    alt={learningImages[learningImageIndex].alt}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                      display: "block",
+                      backgroundColor: "#f0f1f3",
+                    }}
+                  />
+
+                  <button
+                    onClick={prevLearningImage}
+                    aria-label={lang === "zh" ? "上一張圖片" : "Previous image"}
+                    style={{
+                      position: "absolute",
+                      left: "12px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      width: "36px",
+                      height: "36px",
+                      borderRadius: "999px",
+                      border: "1px solid rgba(255,255,255,0.28)",
+                      backgroundColor: "rgba(255,255,255,0.58)",
+                      backdropFilter: "blur(8px)",
+                      color: "#5f5850",
+                      fontSize: "16px",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+                    }}
+                  >
+                    ←
+                  </button>
+
+                  <button
+                    onClick={nextLearningImage}
+                    aria-label={lang === "zh" ? "下一張圖片" : "Next image"}
+                    style={{
+                      position: "absolute",
+                      right: "12px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      width: "36px",
+                      height: "36px",
+                      borderRadius: "999px",
+                      border: "1px solid rgba(255,255,255,0.28)",
+                      backgroundColor: "rgba(255,255,255,0.58)",
+                      backdropFilter: "blur(8px)",
+                      color: "#5f5850",
+                      fontSize: "16px",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+                    }}
+                  >
+                    →
+                  </button>
+
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: "50%",
+                      bottom: "12px",
+                      transform: "translateX(-50%)",
+                      display: "flex",
+                      gap: "8px",
+                      padding: "6px 10px",
+                      borderRadius: "999px",
+                      backgroundColor: "rgba(0,0,0,0.14)",
+                      backdropFilter: "blur(6px)",
+                    }}
+                  >
+                    {learningImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToLearningImage(index)}
+                        aria-label={
+                          lang === "zh"
+                            ? `切換到第 ${index + 1} 張圖片`
+                            : `Go to image ${index + 1}`
+                        }
+                        style={{
+                          width: "8px",
+                          height: "8px",
+                          borderRadius: "999px",
+                          border: "none",
+                          padding: 0,
+                          backgroundColor:
+                            learningImageIndex === index
+                              ? "rgba(255,255,255,0.95)"
+                              : "rgba(255,255,255,0.45)",
+                          cursor: "pointer",
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
