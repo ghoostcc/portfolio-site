@@ -321,6 +321,7 @@ export default function ProjectsPage() {
     const images = projectImages[project.id] || [];
     const currentIndex = imageIndexes[project.id] ?? 0;
     const currentImage = images[currentIndex];
+    const isFirstProject = project.id === "gesture-interaction";
 
     return (
       <div
@@ -334,17 +335,41 @@ export default function ProjectsPage() {
           border: "1px solid rgba(70,60,45,0.06)",
         }}
       >
-        <img
-          src={currentImage}
-          alt={`${project.title} ${currentIndex + 1}`}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            display: "block",
-            backgroundColor: "#f2efe9",
-          }}
-        />
+        {isFirstProject ? (
+          <img
+            src={currentImage}
+            alt={`${project.title} ${currentIndex + 1}`}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              display: "block",
+              backgroundColor: "#f2efe9",
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#f2efe9",
+            }}
+          >
+            <img
+              src={currentImage}
+              alt={`${project.title} ${currentIndex + 1}`}
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
+          </div>
+        )}
 
         <div
           style={{
@@ -627,7 +652,9 @@ export default function ProjectsPage() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: isMobile ? "1fr" : "minmax(0, 0.95fr) minmax(0, 1fr)",
+                  gridTemplateColumns: isMobile
+                    ? "1fr"
+                    : "minmax(0, 0.95fr) minmax(0, 1fr)",
                   alignItems: "start",
                   gap: isMobile ? "20px" : "32px",
                 }}
