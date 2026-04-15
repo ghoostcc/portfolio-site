@@ -333,12 +333,11 @@ export default function ProjectsPage() {
               ? "480px"
               : "640px"
             : isMobile
-            ? "360px"
-            : "520px",
+            ? "260px"
+            : "440px",
           borderRadius: isMobile ? "20px" : "24px",
           overflow: "hidden",
-          backgroundColor: "#f2efe9",
-          border: "1px solid rgba(70,60,45,0.06)",
+          backgroundColor: "transparent",
         }}
       >
         {isFirstProject ? (
@@ -350,7 +349,6 @@ export default function ProjectsPage() {
               height: "100%",
               objectFit: "contain",
               display: "block",
-              backgroundColor: "#f2efe9",
             }}
           />
         ) : (
@@ -361,7 +359,6 @@ export default function ProjectsPage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "#f2efe9",
             }}
           >
             <img
