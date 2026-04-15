@@ -327,9 +327,11 @@ export default function ProjectsPage() {
         style={{
           position: "relative",
           width: "100%",
-          height: "100%",
-          minHeight: isMobile ? "260px" : "420px",
+          aspectRatio: "3 / 4",
+          borderRadius: isMobile ? "20px" : "24px",
+          overflow: "hidden",
           backgroundColor: "#f2efe9",
+          border: "1px solid rgba(70,60,45,0.06)",
         }}
       >
         <img
@@ -338,10 +340,32 @@ export default function ProjectsPage() {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
             display: "block",
+            backgroundColor: "#f2efe9",
           }}
         />
+
+        <div
+          style={{
+            position: "absolute",
+            left: "16px",
+            top: "16px",
+            display: "inline-block",
+            padding: "8px 14px",
+            borderRadius: "999px",
+            backgroundColor: "rgba(255,255,255,0.94)",
+            color: "#6c6358",
+            fontSize: "12px",
+            fontWeight: 700,
+            letterSpacing: "0.06em",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+            border: "1px solid rgba(70,60,45,0.08)",
+            zIndex: 2,
+          }}
+        >
+          {project.tag}
+        </div>
 
         {images.length > 1 && (
           <>
@@ -366,6 +390,7 @@ export default function ProjectsPage() {
                 alignItems: "center",
                 justifyContent: "center",
                 boxShadow: "0 8px 20px rgba(0,0,0,0.16)",
+                zIndex: 2,
               }}
             >
               ←
@@ -392,6 +417,7 @@ export default function ProjectsPage() {
                 alignItems: "center",
                 justifyContent: "center",
                 boxShadow: "0 8px 20px rgba(0,0,0,0.16)",
+                zIndex: 2,
               }}
             >
               →
@@ -409,6 +435,7 @@ export default function ProjectsPage() {
                 borderRadius: "999px",
                 backgroundColor: "rgba(0,0,0,0.18)",
                 backdropFilter: "blur(6px)",
+                zIndex: 2,
               }}
             >
               {images.map((_, index) => (
@@ -593,50 +620,30 @@ export default function ProjectsPage() {
                 borderRadius: isMobile ? "24px" : "28px",
                 border: "1px solid rgba(70,60,45,0.06)",
                 boxShadow: "0 10px 28px rgba(81, 64, 42, 0.05)",
-                overflow: "hidden",
+                padding: isMobile ? "18px" : "20px",
                 scrollMarginTop: "110px",
               }}
             >
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: isMobile ? "1fr" : "1.08fr 0.92fr",
-                  alignItems: "stretch",
+                  gridTemplateColumns: isMobile ? "1fr" : "minmax(0, 0.95fr) minmax(0, 1fr)",
+                  alignItems: "start",
+                  gap: isMobile ? "20px" : "32px",
                 }}
               >
                 <div
                   style={{
-                    position: "relative",
-                    minHeight: isMobile ? "260px" : "100%",
-                    background: "#f2efe9",
+                    width: "100%",
+                    alignSelf: "start",
                   }}
                 >
                   {renderProjectMedia(project)}
-
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "16px",
-                      top: "16px",
-                      display: "inline-block",
-                      padding: "8px 14px",
-                      borderRadius: "999px",
-                      backgroundColor: "rgba(255,255,255,0.94)",
-                      color: "#6c6358",
-                      fontSize: "12px",
-                      fontWeight: 700,
-                      letterSpacing: "0.06em",
-                      boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
-                      border: "1px solid rgba(70,60,45,0.08)",
-                    }}
-                  >
-                    {project.tag}
-                  </div>
                 </div>
 
                 <div
                   style={{
-                    padding: isMobile ? "26px 20px" : "34px 36px 34px",
+                    padding: isMobile ? "2px 2px 4px" : "10px 8px 10px 0",
                     display: "grid",
                     gap: "28px",
                     alignContent: "start",
