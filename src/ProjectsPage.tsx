@@ -328,7 +328,13 @@ export default function ProjectsPage() {
         style={{
           position: "relative",
           width: "100%",
-          aspectRatio: "3 / 4",
+          height: isFirstProject
+            ? isMobile
+              ? "480px"
+              : "640px"
+            : isMobile
+            ? "360px"
+            : "520px",
           borderRadius: isMobile ? "20px" : "24px",
           overflow: "hidden",
           backgroundColor: "#f2efe9",
