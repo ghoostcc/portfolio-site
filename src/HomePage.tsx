@@ -726,7 +726,7 @@ export default function HomePage() {
     gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
     gap: isMobile ? "8px" : "8px 34px",
     marginTop: "8px",
-    paddingLeft: isMobile ? "0" : "6px",
+    paddingLeft: isMobile ? "0" : "12px",
     fontSize: isMobile ? "13px" : "14px",
     lineHeight: 1.7,
     color: "#6a6258",
