@@ -724,12 +724,14 @@ export default function HomePage() {
   style={{
     display: "grid",
     gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-    gap: isMobile ? "8px" : "8px 28px",
-    marginTop: "4px",
+    gap: isMobile ? "8px" : "8px 34px",
+    marginTop: "8px",
+    paddingLeft: isMobile ? "0" : "2px",
     fontSize: isMobile ? "13px" : "14px",
     lineHeight: 1.7,
     color: "#6a6258",
     fontWeight: 600,
+    maxWidth: "440px",
   }}
 >
   {t.hero.highlights.map((item) => (
@@ -760,7 +762,7 @@ export default function HomePage() {
                 style={{
                   display: "flex",
                   gap: "12px",
-                  marginTop: isMobile ? "22px" : "24px",
+                  marginTop: isMobile ? "26px" : "30px",
                   justifyContent: "flex-start",
                   maxWidth: isMobile ? "100%" : "540px",
                   marginLeft: isMobile ? "0" : "auto",
