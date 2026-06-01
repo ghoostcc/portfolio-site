@@ -75,6 +75,12 @@ export default function HomePage() {
         eyebrow: "EXPERIENCE TRANSLATOR",
         title: "LIU YUE TONG",
         subtitle: "將需求、流程與想法，\n轉化為可運作的系統與體驗。",
+        highlights: [
+           "行政流程自動化",
+           "社群配對系統",
+           "個人知識工作流",
+           "互動展覽體驗",
+        ],
         primaryButton: "查看專案",
       },
       cards: [
@@ -173,7 +179,7 @@ export default function HomePage() {
         title: "關於我",
         introTitle: "我是劉玥彤，",
         introText:
-          "從真實需求出發，透過 AI、自動化工具、流程設計\n與互動體驗設計，\n將抽象想法轉化為可運作、可參與、可持續的系統與體驗。\n\n過去曾建立校園請假系統、社群配對系統、個人知識工作流與互動展覽體驗。",
+          "從真實需求出發，透過 AI、自動化工具、流程設計\n與互動體驗設計，\n將抽象想法轉化為可運作、可參與、可持續的系統與體驗。\n\n我關心的不只是功能本身，而是工具是否真的被使用，體驗是否真的被感受到。",
         learningTitle: "學習與探索",
         learningText:
           "持續學習 AI 與自動化相關工具，\n包含 n8n、Make 等流程設計，\n並透過 UI/UX 共學與 TouchDesigner 工作坊，\n探索互動設計與數位體驗的可能性。",
@@ -212,6 +218,12 @@ export default function HomePage() {
         title: "LIU YUE TONG",
         subtitle:
           "Turning needs, workflows and ideas\ninto working systems and participatory experiences.",
+        highlights: [
+           "Workflow Automation",
+           "Community Matching System",
+           "Knowledge Workflow",
+           "Interactive Experience",
+        ],
         primaryButton: "View Projects",
       },
       cards: [
@@ -311,7 +323,7 @@ export default function HomePage() {
         title: "About",
         introTitle: "I am Liu Yue Tong,",
         introText:
-          "I translate real needs into working systems and participatory experiences through AI, automation tools, workflow design and interactive experience design.\n\nMy past work includes a campus leave reporting system, community matching system, personal knowledge workflow and interactive exhibition experiences.",
+          "I translate real needs into working systems and participatory experiences through AI, automation tools, workflow design and interactive experience design.\n\nI care not only about whether something works, but whether it is truly used, felt and experienced in real contexts.",
         learningTitle: "Learning & Exploration",
         learningText:
           "I continue learning AI and automation-related tools,\nincluding workflow design with n8n and Make,\nand through UI/UX study groups and TouchDesigner workshops,\nI explore the possibilities of interactive design and digital experiences.",
@@ -708,7 +720,42 @@ export default function HomePage() {
                   {t.hero.subtitle}
                 </p>
               </div>
-
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+    gap: isMobile ? "8px" : "8px 28px",
+    marginTop: "4px",
+    fontSize: isMobile ? "13px" : "14px",
+    lineHeight: 1.7,
+    color: "#6a6258",
+    fontWeight: 600,
+  }}
+>
+  {t.hero.highlights.map((item) => (
+    <div
+      key={item}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+        whiteSpace: "nowrap",
+      }}
+    >
+      <span
+        style={{
+          color: "#3FAF68",
+          fontSize: "14px",
+          lineHeight: 1,
+          fontWeight: 800,
+        }}
+      >
+        ✓
+      </span>
+      <span>{item}</span>
+    </div>
+  ))}
+</div>
               <div
                 style={{
                   display: "flex",
