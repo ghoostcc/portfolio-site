@@ -74,24 +74,24 @@ export default function HomePage() {
       hero: {
         eyebrow: "EXPERIENCE TRANSLATOR",
         title: "LIU YUE TONG",
-        subtitle: "把想法做成可以被體驗的東西",
+        subtitle: "將需求、流程與想法，\n轉化為可運作的系統與體驗。",
         primaryButton: "查看專案",
       },
       cards: [
         {
           dot: "🟢",
-          title: "快速原型",
-          text: "透過 vibe coding 與數位工具，快速將想法轉為可測試的 prototype",
+          title: "需求轉譯",
+          text: "從抽象想法與真實需求出發，快速建立可測試的 Prototype。",
         },
         {
           dot: "🔵",
-          title: "使用流程設計",
-          text: "設計清晰的使用方式與互動流程，讓概念可以被理解與操作",
+          title: "系統建構",
+          text: "將流程、資訊與互動整理成可持續運作的系統。",
         },
         {
           dot: "🟣",
-          title: "真實場景應用",
-          text: "將設計與技術應用在活動與實際情境中，創造有回饋與驚喜的體驗",
+          title: "體驗落地",
+          text: "讓工具與體驗真正進入現實情境，創造參與感與回饋。",
         },
       ],
       projectsSection: {
@@ -173,23 +173,23 @@ export default function HomePage() {
         title: "關於我",
         introTitle: "我是劉玥彤，",
         introText:
-          "擅長把抽象的想法轉化為可以被參與的體驗與可運作的系統，\n並透過設計與數位工具，在細節中創造回饋與驚喜。",
+          "擅長從真實需求出發，透過 AI、自動化工具、流程設計與互動體驗設計，\n將抽象想法轉化為可運作、可參與、可持續的系統與體驗。\n\n過去曾建立校園請假系統、社群配對系統、個人知識工作流與互動展覽體驗。",
         learningTitle: "學習與探索",
         learningText:
           "持續學習 AI 與自動化相關工具，\n包含 n8n、Make 等流程設計，\n並透過 UI/UX 共學與 TouchDesigner 工作坊，\n探索互動設計與數位體驗的可能性。",
         toolsTitle: "工具與能力",
         toolGroups: [
           {
-            title: "設計工具",
-            items: ["Illustrator", "Photoshop"],
-          },
-          {
-            title: "自動化與系統",
+            title: "AI 與自動化",
             items: ["n8n", "Make", "Apps Script"],
           },
           {
-            title: "互動與實驗",
-            items: ["TouchDesigner"],
+            title: "流程與系統設計",
+            items: ["Workflow Design", "Google Sheets", "Airtable"],
+          },
+          {
+            title: "互動與體驗設計",
+            items: ["TouchDesigner", "UI/UX", "Event Design"],
           },
         ] as ToolGroup[],
       },
@@ -211,24 +211,24 @@ export default function HomePage() {
         eyebrow: "EXPERIENCE TRANSLATOR",
         title: "LIU YUE TONG",
         subtitle:
-          "Experience Translator\nTurning ideas into things people can actually experience",
+          "Turning needs, workflows and ideas\ninto working systems and participatory experiences.",
         primaryButton: "View Projects",
       },
       cards: [
         {
           dot: "🟢",
-          title: "Rapid Prototyping",
-          text: "Using vibe coding and digital tools to quickly turn ideas into testable prototypes",
+          title: "Need Translation",
+          text: "Turning abstract ideas and real needs into testable prototypes.",
         },
         {
           dot: "🔵",
-          title: "User Flow Design",
-          text: "Designing clear ways of use and interaction flows so concepts can be understood and operated",
+          title: "System Building",
+          text: "Organizing workflows, information and interactions into sustainable systems.",
         },
         {
           dot: "🟣",
-          title: "Real-world Application",
-          text: "Applying design and technology in events and real contexts to create experiences with feedback and surprise",
+          title: "Experience Delivery",
+          text: "Bringing tools and experiences into real contexts to create engagement and feedback.",
         },
       ],
       projectsSection: {
@@ -311,23 +311,23 @@ export default function HomePage() {
         title: "About",
         introTitle: "I am Liu Yue Tong,",
         introText:
-          "I am good at turning abstract ideas into experiences people can participate in and systems that can actually work,\nand through design and digital tools, I create feedback and surprise in the details.",
+          "I translate real needs into working systems and participatory experiences through AI, automation tools, workflow design and interactive experience design.\n\nMy past work includes a campus leave reporting system, community matching system, personal knowledge workflow and interactive exhibition experiences.",
         learningTitle: "Learning & Exploration",
         learningText:
           "I continue learning AI and automation-related tools,\nincluding workflow design with n8n and Make,\nand through UI/UX study groups and TouchDesigner workshops,\nI explore the possibilities of interactive design and digital experiences.",
         toolsTitle: "Tools & Skills",
         toolGroups: [
           {
-            title: "Design Tools",
-            items: ["Illustrator", "Photoshop"],
-          },
-          {
-            title: "Automation & Systems",
+            title: "AI & Automation",
             items: ["n8n", "Make", "Apps Script"],
           },
           {
-            title: "Interaction & Experiment",
-            items: ["TouchDesigner"],
+            title: "Workflow & System Design",
+            items: ["Workflow Design", "Google Sheets", "Airtable"],
+          },
+          {
+            title: "Interaction & Experience Design",
+            items: ["TouchDesigner", "UI/UX", "Event Design"],
           },
         ] as ToolGroup[],
       },
