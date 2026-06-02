@@ -101,12 +101,12 @@ export default function HomePage() {
         },
       ],
       projectsSection: {
-        eyebrow: "PROJECTS",
-        title: "精選專案",
+        eyebrow: "CASE STUDIES",
+        title: "問題與解法",
       },
       projects: [
         {
-          tag: "Interactive Website",
+          tag: "Experience Design",
           title: "手勢互動網站",
           description: "把情緒覺察轉成可即時互動的體驗 prototype。",
           button: "More",
@@ -129,7 +129,7 @@ export default function HomePage() {
           targetId: "interactive-exhibition",
         },
         {
-          tag: "Community System",
+          tag: "Workflow & Systems",
           title: "社群配對系統",
           description:
             "設計活動中的配對流程與邏輯系統\n\n透過自動化與資料管理，\n讓配對更穩定且可持續運作。",
@@ -140,7 +140,7 @@ export default function HomePage() {
           targetId: "discord-matching-system",
         },
         {
-          tag: "Workflow Tool",
+          tag: "Workflow & Systems",
           title: "請假回報系統",
           description:
             "優化行政流程，減少溝通與操作成本\n\n透過自動化與資料整合，\n讓請假申請與通知更即時且直覺。",
@@ -151,7 +151,7 @@ export default function HomePage() {
           targetId: "leave-reporting-system",
         },
         {
-          tag: "Automation",
+          tag: "Workflow & Systems",
           title: "個人自動化工具",
           description:
             "從真實需求出發設計個人工作流\n\n整合多種工具，\n建立可持續使用的閱讀與知識管理系統。",
@@ -162,7 +162,7 @@ export default function HomePage() {
           targetId: "personal-automation-tools",
         },
         {
-          tag: "Brand / Event",
+          tag: "Experience Design",
           title: "E-casso 藝術品牌",
           description:
             "將不同主題轉化為可參與的體驗\n\n透過藝術與跨領域結合，\n設計具有互動與回饋的活動形式。",
@@ -244,12 +244,12 @@ export default function HomePage() {
         },
       ],
       projectsSection: {
-        eyebrow: "PROJECTS",
-        title: "Selected Projects",
+        eyebrow: "CASE STUDIES",
+        title: "Problems & Solutions",
       },
       projects: [
         {
-          tag: "Interactive Website",
+          tag: "Experience Design",
           title: "Gesture Interaction Website",
           description:
             "An interactive prototype that turns emotional awareness into real-time experience.",
@@ -273,7 +273,7 @@ export default function HomePage() {
           targetId: "interactive-exhibition",
         },
         {
-          tag: "Community System",
+          tag: "Workflow & Systems",
           title: "Community Matching System",
           description:
             "Designing the matching logic and flow for community events.\n\nUsing automation and data management to make matching more stable and sustainable.",
@@ -284,7 +284,7 @@ export default function HomePage() {
           targetId: "discord-matching-system",
         },
         {
-          tag: "Workflow Tool",
+          tag: "Workflow & Systems",
           title: "Leave Reporting System",
           description:
             "Optimizing administrative workflows to reduce communication and operation costs.\n\nUsing automation and data integration to make leave requests and notifications more immediate and intuitive.",
@@ -295,7 +295,7 @@ export default function HomePage() {
           targetId: "leave-reporting-system",
         },
         {
-          tag: "Automation",
+          tag: "Workflow & Systems",
           title: "Personal Automation Tools",
           description:
             "Designing personal workflows from real everyday needs.\n\nCombining multiple tools to build a sustainable system for reading and knowledge management.",
@@ -306,7 +306,7 @@ export default function HomePage() {
           targetId: "personal-automation-tools",
         },
         {
-          tag: "Brand / Event",
+          tag: "Experience Design",
           title: "E-casso Art Brand",
           description:
             "Turning different themes into participatory experiences.\n\nCombining art with cross-disciplinary ideas to design interactive event formats with feedback and engagement.",
