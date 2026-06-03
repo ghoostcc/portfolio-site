@@ -36,7 +36,6 @@ type ToolGroup = {
 export default function HomePage() {
   const [lang, setLang] = useState<Lang>("zh");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [learningImageIndex, setLearningImageIndex] = useState(0);
 
@@ -406,13 +405,6 @@ export default function HomePage() {
     },
   ];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-  };
-
-  const goToImage = (index: number) => {
-    setCurrentImageIndex(index);
-  };
 
   const nextLearningImage = () => {
     setLearningImageIndex((prev) => (prev + 1) % learningImages.length);
@@ -623,8 +615,8 @@ export default function HomePage() {
                   }}
                 >
                   <img
-                    src={heroImages[currentImageIndex].src}
-                    alt={heroImages[currentImageIndex].alt}
+                    src={heroImages[0].src}
+                    alt={heroImages[0].alt}
                     style={{
                       width: "100%",
                       display: "block",
