@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import heroImage1 from "./assets/images/hero/gesture-interaction-main.png";
-import heroImage2 from "./assets/images/hero/gesture-touchdesign.png";
 import aboutMeImage from "./assets/images/about me/me.jpg";
 import aboutLearningDetail1 from "./assets/images/about me/detail-1.png";
 import aboutLearningDetail2 from "./assets/images/about me/detail-2.png";
@@ -117,7 +115,8 @@ export default function HomePage() {
     description:
       "將社群活動中的配對流程系統化。\n\n透過自動化與資料管理，降低人工操作成本並提升配對穩定性。",
     button: "More",
-    imageType: "placeholder",
+    imageType: "image",
+    imageSrc: communitySystemCover,
     accent: "#4B84D9",
     monogram: "DC",
     targetId: "discord-matching-system",
@@ -128,7 +127,8 @@ export default function HomePage() {
     description:
       "為校園單位重整請假、審核與通知流程。\n\n透過 Apps Script 自動化減少重複行政工作，提升資訊同步效率。",
     button: "More",
-    imageType: "placeholder",
+    imageType: "image",
+    imageSrc: leaveManagementCover,
     accent: "#B1784F",
     monogram: "WF",
     targetId: "leave-reporting-system",
@@ -139,7 +139,8 @@ export default function HomePage() {
     description:
       "為展覽活動建立參展者專屬邀請管理平台。\n\n整合身份驗證、邀請資料填寫與即時名單同步，降低人工整理成本。",
     button: "More",
-    imageType: "placeholder",
+    imageType: "image",
+    imageSrc: invitationManagementCover,
     accent: "#6A9CF8",
     monogram: "IV",
     targetId: "invitation-system",
@@ -150,7 +151,8 @@ export default function HomePage() {
     description:
       "為品牌活動建立即時抽籤與分組流程。\n\n結合主持人控制端與參與者畫面，讓結果同步能在現場即時完成。",
     button: "More",
-    imageType: "placeholder",
+    imageType: "image",
+    imageSrc: groupLotteryCover,
     accent: "#4DAA8C",
     monogram: "GR",
     targetId: "group-system",
@@ -173,7 +175,7 @@ export default function HomePage() {
       "將情緒覺察轉化為可即時互動的體驗 Prototype。",
     button: "More",
     imageType: "image",
-    imageSrc: coverImage1,
+    imageSrc: interactiveWebsiteCover,
     accent: "#3FAF68",
     monogram: "GI",
     targetId: "gesture-interaction",
@@ -185,7 +187,7 @@ export default function HomePage() {
       "以風景與自我為主題的即時互動展演。\n\n透過 TouchDesigner 建構視覺與互動系統，讓畫面能隨手勢與操作即時變化。",
     button: "More",
     imageType: "image",
-    imageSrc: coverImage2,
+    imageSrc: experienceDesignCover,
     accent: "#8D63D2",
     monogram: "EX",
     targetId: "interactive-exhibition",
@@ -197,7 +199,7 @@ export default function HomePage() {
       "將不同主題轉化為可參與的體驗。\n\n透過藝術與跨領域結合，設計具有互動與回饋的活動形式。",
     button: "More",
     imageType: "image",
-    imageSrc: coverImage6,
+    imageSrc: ecassoCover,
     accent: "#9A5ACB",
     monogram: "EC",
     targetId: "e-casso-art-brand",
@@ -284,7 +286,7 @@ export default function HomePage() {
             "An interactive prototype that turns emotional awareness into real-time experience.",
           button: "More",
           imageType: "image",
-          imageSrc: coverImage1,
+          imageSrc: interactiveWebsiteCover,
           accent: "#3FAF68",
           monogram: "GI",
           targetId: "gesture-interaction",
@@ -296,7 +298,7 @@ export default function HomePage() {
             "A real-time interactive performance about landscape and self.\n\nBuilt with TouchDesigner to let visuals shift instantly through gesture and live control.",
           button: "More",
           imageType: "image",
-          imageSrc: coverImage2,
+          imageSrc: experienceDesignCover,
           accent: "#8D63D2",
           monogram: "EX",
           targetId: "interactive-exhibition",
@@ -341,7 +343,7 @@ export default function HomePage() {
             "Turning different themes into participatory experiences.\n\nCombining art with cross-disciplinary ideas to design interactive event formats with feedback and engagement.",
           button: "More",
           imageType: "image",
-          imageSrc: coverImage6,
+          imageSrc: ecassoCover,
           accent: "#9A5ACB",
           monogram: "EC",
           targetId: "e-casso-art-brand",
@@ -385,21 +387,11 @@ export default function HomePage() {
   const t = content[lang];
 
   const heroImages = [
-    {
-      src: heroImage1,
-      alt:
-        lang === "zh"
-          ? "手勢互動網站主畫面"
-          : "Gesture interaction website main screen",
-    },
-    {
-      src: heroImage2,
-      alt:
-        lang === "zh"
-          ? "手勢互動體驗現場照片"
-          : "Gesture interaction experience photo",
-    },
-  ];
+  {
+    src: heroCollage,
+    alt: lang === "zh" ? "作品總覽拼貼" : "Project collage",
+  },
+];
 
   const learningImages = [
     {
