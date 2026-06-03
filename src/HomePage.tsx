@@ -633,6 +633,7 @@ export default function HomePage() {
                     }}
                   />
                 </div>
+                </div>
               <div
                 style={{
                   display: "grid",
