@@ -10,6 +10,7 @@ import groupLotteryCover from "./assets/images/group-lottery-cover.png";
 import interactiveWebsiteCover from "./assets/images/Interactive Website-cover.png";
 import invitationManagementCover from "./assets/images/invitation-management-cover.png";
 import leaveManagementCover from "./assets/images/leave-management-cover.png";
+import automationToolsCover from "./assets/images/automation-tools-cover.png";
 
 import heroCollage from "./assets/images/hero-collage.png";
 
@@ -163,7 +164,8 @@ export default function HomePage() {
     description:
       "建立閱讀、整理與輸出的個人知識系統。\n\n整合 AI 與自動化工具，讓知識能持續累積與再利用。",
     button: "More",
-    imageType: "placeholder",
+    imageType: "image",
+    imageSrc: automationToolsCover,
     accent: "#3C9D94",
     monogram: "AU",
     targetId: "personal-automation-tools",
