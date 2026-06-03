@@ -281,10 +281,70 @@ export default function HomePage() {
       },
       projects: [
         {
+          tag: "Workflow & Systems",
+          title: "Community Matching System",
+          description:
+            "Systemizing the matching process for community events.\n\nThrough automation and data management, this project reduces manual workload and improves the stability of matching results.",
+          button: "More",
+          imageType: "image",
+          imageSrc: communitySystemCover,
+          accent: "#4B84D9",
+          monogram: "DC",
+          targetId: "discord-matching-system",
+        },
+        {
+          tag: "Workflow & Systems",
+          title: "Administrative Workflow Automation",
+          description:
+            "Redesigning leave requests, approval and notification workflows for a campus unit.\n\nUsing Apps Script automation to reduce repetitive administrative work and improve information synchronization.",
+          button: "More",
+          imageType: "image",
+          imageSrc: leaveManagementCover,
+          accent: "#B1784F",
+          monogram: "WF",
+          targetId: "leave-reporting-system",
+        },
+        {
+          tag: "Workflow & Systems",
+          title: "Exhibitor Invitation Management System",
+          description:
+            "Building a dedicated invitation management platform for exhibition participants.\n\nIntegrating identity verification, invitation form submission and real-time list synchronization to reduce manual organization work.",
+          button: "More",
+          imageType: "image",
+          imageSrc: invitationManagementCover,
+          accent: "#6A9CF8",
+          monogram: "IV",
+          targetId: "invitation-system",
+        },
+        {
+          tag: "Workflow & Systems",
+          title: "Event Grouping System",
+          description:
+            "Creating a real-time lottery and grouping flow for brand events.\n\nCombining a host control panel with participant screens so results can be synchronized instantly on-site.",
+          button: "More",
+          imageType: "image",
+          imageSrc: groupLotteryCover,
+          accent: "#4DAA8C",
+          monogram: "GR",
+          targetId: "group-system",
+        },
+        {
+          tag: "Workflow & Systems",
+          title: "Personal Knowledge Workflow",
+          description:
+            "Building a personal knowledge system for reading, organizing and output.\n\nIntegrating AI and automation tools so knowledge can be continuously accumulated and reused.",
+          button: "More",
+          imageType: "image",
+          imageSrc: automationToolsCover,
+          accent: "#3C9D94",
+          monogram: "AU",
+          targetId: "personal-automation-tools",
+        },
+        {
           tag: "Experience Design",
           title: "Gesture Interaction Website",
           description:
-            "An interactive prototype that turns emotional awareness into real-time experience.",
+            "Turning emotional awareness into a real-time interactive experience prototype.",
           button: "More",
           imageType: "image",
           imageSrc: interactiveWebsiteCover,
@@ -296,7 +356,7 @@ export default function HomePage() {
           tag: "Experience Design",
           title: "Interactive Visual Experiment",
           description:
-            "A real-time interactive performance about landscape and self.\n\nBuilt with TouchDesigner to let visuals shift instantly through gesture and live control.",
+            "A real-time interactive performance themed around landscape and self.\n\nBuilt with TouchDesigner to create a visual and interaction system where the image changes instantly through gestures and live control.",
           button: "More",
           imageType: "image",
           imageSrc: experienceDesignCover,
@@ -305,43 +365,10 @@ export default function HomePage() {
           targetId: "interactive-exhibition",
         },
         {
-          tag: "Workflow & Systems",
-          title: "Community Matching System",
-          description:
-            "Designing the matching logic and flow for community events.\n\nUsing automation and data management to make matching more stable and sustainable.",
-          button: "More",
-          imageType: "placeholder",
-          accent: "#4B84D9",
-          monogram: "DC",
-          targetId: "discord-matching-system",
-        },
-        {
-          tag: "Workflow & Systems",
-          title: "Leave Reporting System",
-          description:
-            "Optimizing administrative workflows to reduce communication and operation costs.\n\nUsing automation and data integration to make leave requests and notifications more immediate and intuitive.",
-          button: "More",
-          imageType: "placeholder",
-          accent: "#B1784F",
-          monogram: "WF",
-          targetId: "leave-reporting-system",
-        },
-        {
-          tag: "Workflow & Systems",
-          title: "Personal Automation Tools",
-          description:
-            "Designing personal workflows from real everyday needs.\n\nCombining multiple tools to build a sustainable system for reading and knowledge management.",
-          button: "More",
-          imageType: "placeholder",
-          accent: "#3C9D94",
-          monogram: "AU",
-          targetId: "personal-automation-tools",
-        },
-        {
           tag: "Experience Design",
           title: "E-casso Art Brand",
           description:
-            "Turning different themes into participatory experiences.\n\nCombining art with cross-disciplinary ideas to design interactive event formats with feedback and engagement.",
+            "Turning different themes into participatory experiences.\n\nThrough art and cross-disciplinary collaboration, this project designs event formats with interaction and feedback.",
           button: "More",
           imageType: "image",
           imageSrc: ecassoCover,
