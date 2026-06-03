@@ -5,9 +5,15 @@ import heroImage2 from "./assets/images/hero/gesture-touchdesign.png";
 import aboutMeImage from "./assets/images/about me/me.jpg";
 import aboutLearningDetail1 from "./assets/images/about me/detail-1.png";
 import aboutLearningDetail2 from "./assets/images/about me/detail-2.png";
-import coverImage1 from "./assets/images/hero/cover-1.png";
-import coverImage2 from "./assets/images/hero/cover-2.png";
-import coverImage6 from "./assets/images/hero/cover-6.png";
+import communitySystemCover from "./assets/images/Community System-cover.png";
+import ecassoCover from "./assets/images/ecasso-cover.png";
+import experienceDesignCover from "./assets/images/Experience Design-cover.png";
+import groupLotteryCover from "./assets/images/group-lottery-cover.png";
+import interactiveWebsiteCover from "./assets/images/Interactive Website-cover.png";
+import invitationManagementCover from "./assets/images/invitation-management-cover.png";
+import leaveManagementCover from "./assets/images/leave-management-cover.png";
+
+import heroCollage from "./assets/images/hero-collage.png";
 
 type Lang = "zh" | "en";
 
