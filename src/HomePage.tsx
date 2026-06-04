@@ -113,7 +113,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "社群配對系統",
     description:
-      "\n協助管理活動參與者與配對流程。\n減少人工整理成本，提高配對效率。",
+      "將社群活動中的配對流程系統化。\n\n透過自動化與資料管理，降低人工操作成本並提升配對穩定性。",
     button: "More",
     imageType: "image",
     imageSrc: communitySystemCover,
@@ -125,7 +125,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "行政流程自動化",
     description:
-      "\n校園請假與審核流程系統化。\n減少重複行政作業與資訊落差。",
+      "為校園單位重整請假、審核與通知流程。\n\n透過 Apps Script 自動化減少重複行政工作，提升資訊同步效率。",
     button: "More",
     imageType: "image",
     imageSrc: leaveManagementCover,
@@ -135,9 +135,9 @@ export default function HomePage() {
   },
   {
     tag: "Workflow & Systems",
-    title: "展覽邀請管理系統",
+    title: "參展者邀請管理系統",
     description:
-      "\n集中管理展覽邀請資訊。\n讓名單收集與同步更有效率。",
+      "為展覽活動建立參展者專屬邀請管理平台。\n\n整合身份驗證、邀請資料填寫與即時名單同步，降低人工整理成本。",
     button: "More",
     imageType: "image",
     imageSrc: invitationManagementCover,
@@ -149,7 +149,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "活動分組系統",
     description:
-      "\n為品牌活動建立即時抽籤與分組流程。\n同步呈現主持人與參與者結果。",
+      "為品牌活動建立即時抽籤與分組流程。\n\n結合主持人控制端與參與者畫面，讓結果同步能在現場即時完成。",
     button: "More",
     imageType: "image",
     imageSrc: groupLotteryCover,
@@ -161,7 +161,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "個人知識工作流",
     description:
-      "\n整合資訊與自動化流程。\n建立可持續運作的個人工作系統。",
+      "建立閱讀、整理與輸出的個人知識系統。\n\n整合 AI 與自動化工具，讓知識能持續累積與再利用。",
     button: "More",
     imageType: "image",
     imageSrc: automationToolsCover,
@@ -173,7 +173,7 @@ export default function HomePage() {
     tag: "Experience Design",
     title: "手勢互動網站",
     description:
-      "\n將情緒探索轉化為互動體驗。\n透過手勢與畫面即時回應。",
+      "將情緒覺察轉化為可即時互動的體驗 Prototype。",
     button: "More",
     imageType: "image",
     imageSrc: interactiveWebsiteCover,
@@ -185,7 +185,7 @@ export default function HomePage() {
     tag: "Experience Design",
     title: "互動視覺實驗",
     description:
-      "\n以風景與自我為主題的即時互動展演。\n探索身體、影像與即時回饋。",
+      "以風景與自我為主題的即時互動展演。\n\n透過 TouchDesigner 建構視覺與互動系統，讓畫面能隨手勢與操作即時變化。",
     button: "More",
     imageType: "image",
     imageSrc: experienceDesignCover,
@@ -195,9 +195,9 @@ export default function HomePage() {
   },
   {
     tag: "Experience Design",
-    title: "E-casso 體驗創作品牌",
+    title: "E-casso 藝術品牌",
     description:
-      "\n透過體驗與創作，留下自己的想法。\n結合藝術與不同領域，探索更多可能。",
+      "將不同主題轉化為可參與的體驗。\n\n透過藝術與跨領域結合，設計具有互動與回饋的活動形式。",
     button: "More",
     imageType: "image",
     imageSrc: ecassoCover,
@@ -212,9 +212,14 @@ export default function HomePage() {
         introTitle: "我是劉玥彤，",
         introText:
           "從真實需求出發，透過 AI、自動化工具、流程設計\n與互動體驗設計，\n將抽象想法轉化為可運作、可參與、可持續的系統與體驗。\n\n我關心的不只是功能本身，而是工具是否真的被使用，體驗是否真的被感受到。",
-        learningTitle: "學習與探索",
+        learningTitle: "持續探索",
         learningText:
-          "持續學習 AI 與自動化相關工具，\n包含 n8n、Make 等流程設計，\n並透過 UI/UX 共學與 TouchDesigner 工作坊，\n探索互動設計與數位體驗的可能性。",
+          "目前持續透過 AI、自動化工具與互動設計，探索不同形式的體驗可能。",
+        learningItems: [
+          "品牌 LINE 官方帳號與 Rich Menu 設計",
+          "年底展覽籌備與體驗發想",
+          "線上 E-Casso 互動形式的可能性",
+        ],
         toolsTitle: "工具與能力",
         toolGroups: [
           {
@@ -383,9 +388,14 @@ export default function HomePage() {
         introTitle: "I am Liu Yue Tong,",
         introText:
           "I translate real needs into working systems and participatory experiences through AI, automation tools, workflow design and interactive experience design.\n\nI care not only about whether something works, but whether it is truly used, felt and experienced in real contexts.",
-        learningTitle: "Learning & Exploration",
+        learningTitle: "Continuous Exploration",
         learningText:
-          "I continue learning AI and automation-related tools,\nincluding workflow design with n8n and Make,\nand through UI/UX study groups and TouchDesigner workshops,\nI explore the possibilities of interactive design and digital experiences.",
+          "I am currently exploring different forms of experiential possibilities through AI, automation tools, and interactive design.",
+        learningItems: [
+          "Brand LINE official account and Rich Menu design",
+          "Year-end exhibition preparation and experience ideation",
+          "Possibilities for online E-Casso interactive formats",
+        ],
         toolsTitle: "Tools & Skills",
         toolGroups: [
           {
@@ -1375,6 +1385,47 @@ export default function HomePage() {
                   >
                     {t.aboutSection.learningText}
                   </p>
+
+                  <div
+                    style={{
+                      display: "grid",
+                      gap: "10px",
+                      marginTop: "18px",
+                      justifyItems: "start",
+                      maxWidth: "520px",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  >
+                    {t.aboutSection.learningItems.map((item) => (
+                      <div
+                        key={item}
+                        style={{
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "10px",
+                          fontSize: isMobile ? "15px" : "16px",
+                          lineHeight: 1.7,
+                          color: "#5b5750",
+                          fontWeight: 600,
+                          textAlign: "left",
+                        }}
+                      >
+                        <span
+                          style={{
+                            color: "#3FAF68",
+                            fontSize: "15px",
+                            lineHeight: 1.7,
+                            fontWeight: 800,
+                            flexShrink: 0,
+                          }}
+                        >
+                          ✓
+                        </span>
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div
