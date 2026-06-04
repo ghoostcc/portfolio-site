@@ -99,34 +99,6 @@ export default function ProjectsPage() {
       instagramLabel: "IG 連結",
       projects: [
         {
-          id: "gesture-interaction",
-          tag: "Interactive Experience",
-          title: "手勢互動體驗｜情緒覺察",
-          summary:
-            "結合實體票券、數位互動與手勢操作，將抽象情緒轉化為可被看見與感受的變化。",
-          accent: "#3FAF68",
-          monogram: "GI",
-          introBlocks: [
-            "在與人生教練合辦的活動中，\n我設計了一套結合「實體票券」與「數位互動」的體驗流程，",
-            "參與者透過票券上的條碼對準現場電腦鏡頭，\n我透過手機進行遠端控制，作為互動流程的控制端，\n並結合手勢操作即時影響畫面中的角色狀態\n讓「抽象情緒」轉化為可以被看見與感受的變化。",
-            "整體體驗串連「進場 → 互動 → 結束」，\n形成一個完整的參與流程。",
-          ],
-        },
-        {
-          id: "interactive-exhibition",
-          tag: "Experience Design",
-          title: "互動視覺實驗｜TouchDesigner",
-          summary:
-            "以個人感受為起點，結合互動視覺與空間 mapping，讓觀看成為可以被參與的展演體驗。",
-          accent: "#8D63D2",
-          monogram: "TD",
-          introBlocks: [
-            "在 TouchDesigner 工作坊中，\n我以「我所觀看的風景」與「我是誰」為主題，\n嘗試將個人的感受轉化為可被操作的互動視覺。",
-            "我以現場的方盒子作為載體進行 mapping，\n讓畫面不只是呈現，而是與空間產生關係，\n成為一個可以被觀看與參與的展演裝置。",
-            "整體設計包含三個主要互動：\n\n1. 啟動機制\n透過手機遙控觸發，作為整個展演的開始，\n讓觀眾從一個明確的「進入點」進入體驗。\n\n2. 風景互動\n將台中地標轉化為視覺素材，\n觀眾可以透過手勢切換畫面，並進行放大與縮小，\n在互動中重新觀看熟悉的風景。\n\n3. 藝術表達\n透過手機觸控操作，在畫面中生成筆觸，\n讓使用者能直接在作品上留下痕跡，\n形成一種即時的創作與參與。",
-          ],
-        },
-        {
           id: "discord-matching-system",
           tag: "Community System",
           title: "社群配對系統｜活動流程設計",
@@ -197,6 +169,34 @@ export default function ProjectsPage() {
           ],
         },
         {
+          id: "gesture-interaction",
+          tag: "Interactive Experience",
+          title: "手勢互動體驗｜情緒覺察",
+          summary:
+            "結合實體票券、數位互動與手勢操作，將抽象情緒轉化為可被看見與感受的變化。",
+          accent: "#3FAF68",
+          monogram: "GI",
+          introBlocks: [
+            "在與人生教練合辦的活動中，\n我設計了一套結合「實體票券」與「數位互動」的體驗流程，",
+            "參與者透過票券上的條碼對準現場電腦鏡頭，\n我透過手機進行遠端控制，作為互動流程的控制端，\n並結合手勢操作即時影響畫面中的角色狀態\n讓「抽象情緒」轉化為可以被看見與感受的變化。",
+            "整體體驗串連「進場 → 互動 → 結束」，\n形成一個完整的參與流程。",
+          ],
+        },
+        {
+          id: "interactive-exhibition",
+          tag: "Experience Design",
+          title: "互動視覺實驗｜TouchDesigner",
+          summary:
+            "以個人感受為起點，結合互動視覺與空間 mapping，讓觀看成為可以被參與的展演體驗。",
+          accent: "#8D63D2",
+          monogram: "TD",
+          introBlocks: [
+            "在 TouchDesigner 工作坊中，\n我以「我所觀看的風景」與「我是誰」為主題，\n嘗試將個人的感受轉化為可被操作的互動視覺。",
+            "我以現場的方盒子作為載體進行 mapping，\n讓畫面不只是呈現，而是與空間產生關係，\n成為一個可以被觀看與參與的展演裝置。",
+            "整體設計包含三個主要互動：\n\n1. 啟動機制\n透過手機遙控觸發，作為整個展演的開始，\n讓觀眾從一個明確的「進入點」進入體驗。\n\n2. 風景互動\n將台中地標轉化為視覺素材，\n觀眾可以透過手勢切換畫面，並進行放大與縮小，\n在互動中重新觀看熟悉的風景。\n\n3. 藝術表達\n透過手機觸控操作，在畫面中生成筆觸，\n讓使用者能直接在作品上留下痕跡，\n形成一種即時的創作與參與。",
+          ],
+        },
+        {
           id: "e-casso-art-brand",
           tag: "Brand / Event",
           title: "E-casso 藝術品牌｜體驗轉譯與活動設計",
@@ -222,34 +222,6 @@ export default function ProjectsPage() {
       introLabel: "Project Overview",
       instagramLabel: "Instagram",
       projects: [
-        {
-          id: "gesture-interaction",
-          tag: "Interactive Experience",
-          title: "Gesture Interaction Experience | Emotional Awareness",
-          summary:
-            "Combining physical tickets, digital interaction, and gesture input to turn abstract emotions into visible and perceivable changes.",
-          accent: "#3FAF68",
-          monogram: "GI",
-          introBlocks: [
-            "In a co-hosted event with a life coach,\nI designed an experience flow that combined physical tickets and digital interaction.",
-            "Participants aligned the barcode on their ticket with the on-site computer camera.\nI used my phone as the remote control side of the interaction flow,\nand combined gesture input to affect the character state on screen in real time,\nturning abstract emotions into visible and perceivable changes.",
-            "The whole experience connected entry → interaction → ending,\nforming a complete participation flow.",
-          ],
-        },
-        {
-          id: "interactive-exhibition",
-          tag: "Experience Design",
-          title: "Interactive Visual Experiment | TouchDesigner",
-          summary:
-            "Starting from personal perception, this project combines interactive visuals and spatial mapping to turn viewing into a participatory performance experience.",
-          accent: "#8D63D2",
-          monogram: "TD",
-          introBlocks: [
-            "In a TouchDesigner workshop,\nI explored the themes of “the landscapes I see” and “who I am”,\ntrying to transform personal feelings into interactive visuals.",
-            "I used a box in the physical space as the mapping object,\nso the visuals were not only displayed,\nbut also connected to the surrounding space and became part of a participatory installation.",
-            "The design included three main interactions:\n\n1. Triggering mechanism\nActivated by mobile remote control as the entry point of the experience.\n\n2. Landscape interaction\nTaichung landmarks were transformed into visual material,\nand users could switch, zoom in, and zoom out through gestures.\n\n3. Artistic expression\nThrough mobile touch input, users could generate brush strokes on the screen,\nleaving traces directly on the work as a form of live participation.",
-          ],
-        },
         {
           id: "discord-matching-system",
           tag: "Community System",
@@ -318,6 +290,34 @@ export default function ProjectsPage() {
             "This project came from my everyday needs.\nDuring the process, I divided those needs into two main scenarios:\n“reading records” and “knowledge storage.”",
             "For reading records,\nI used a LINE official account as the input interface,\nso I could record reading progress, quotes, and future reading lists anytime.\n\nThrough Make,\nthe data was organized and sent to Airtable,\nwhere relational fields helped make the structure and progress clearer.",
             "For knowledge storage,\nI used Google Sheets and Apps Script as the foundation,\nand combined them with mobile shortcuts,\nso I could quickly save content from different platforms through the share action.\n\nI also added simple notes during capture,\nwhich reduced the problem of saving things casually but not being able to use them later.",
+          ],
+        },
+        {
+          id: "gesture-interaction",
+          tag: "Interactive Experience",
+          title: "Gesture Interaction Experience | Emotional Awareness",
+          summary:
+            "Combining physical tickets, digital interaction, and gesture input to turn abstract emotions into visible and perceivable changes.",
+          accent: "#3FAF68",
+          monogram: "GI",
+          introBlocks: [
+            "In a co-hosted event with a life coach,\nI designed an experience flow that combined physical tickets and digital interaction.",
+            "Participants aligned the barcode on their ticket with the on-site computer camera.\nI used my phone as the remote control side of the interaction flow,\nand combined gesture input to affect the character state on screen in real time,\nturning abstract emotions into visible and perceivable changes.",
+            "The whole experience connected entry → interaction → ending,\nforming a complete participation flow.",
+          ],
+        },
+        {
+          id: "interactive-exhibition",
+          tag: "Experience Design",
+          title: "Interactive Visual Experiment | TouchDesigner",
+          summary:
+            "Starting from personal perception, this project combines interactive visuals and spatial mapping to turn viewing into a participatory performance experience.",
+          accent: "#8D63D2",
+          monogram: "TD",
+          introBlocks: [
+            "In a TouchDesigner workshop,\nI explored the themes of “the landscapes I see” and “who I am”,\ntrying to transform personal feelings into interactive visuals.",
+            "I used a box in the physical space as the mapping object,\nso the visuals were not only displayed,\nbut also connected to the surrounding space and became part of a participatory installation.",
+            "The design included three main interactions:\n\n1. Triggering mechanism\nActivated by mobile remote control as the entry point of the experience.\n\n2. Landscape interaction\nTaichung landmarks were transformed into visual material,\nand users could switch, zoom in, and zoom out through gestures.\n\n3. Artistic expression\nThrough mobile touch input, users could generate brush strokes on the screen,\nleaving traces directly on the work as a form of live participation.",
           ],
         },
         {
