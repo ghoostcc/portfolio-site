@@ -36,7 +36,6 @@ export default function HomePage() {
   const [lang, setLang] = useState<Lang>("zh");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-  const [learningImageIndex, setLearningImageIndex] = useState(0);
 
   const projectScrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -245,176 +244,175 @@ export default function HomePage() {
     },
     en: {
       nav: {
-        projects: "Projects",
-        about: "About",
-        contact: "Contact",
+        projects: "專案",
+        about: "關於我",
+        contact: "聯絡",
       },
       hero: {
         eyebrow: "EXPERIENCE TRANSLATOR",
         title: "LIU YUE TONG",
-        subtitle:
-          "Turning needs, workflows and ideas\ninto working systems and participatory experiences.",
+        subtitle: "將需求、流程與想法，\n轉化為可運作的系統與體驗。",
         highlights: [
-           "Workflow Automation",
-           "Community Matching System",
-           "Knowledge Workflow",
-           "Interactive Experience",
+           "行政流程自動化",
+           "社群配對系統",
+           "個人知識工作流",
+           "互動展覽體驗",
         ],
-        primaryButton: "View Projects",
+        primaryButton: "查看專案",
       },
       cards: [
         {
           dot: "🟢",
-          title: "Need Translation",
-          text: "Turning abstract ideas and real needs into testable prototypes.",
+          title: "需求轉譯",
+          text: "從抽象想法與真實需求出發，快速建立可測試的 Prototype。",
         },
         {
           dot: "🔵",
-          title: "System Building",
-          text: "Organizing workflows, information and interactions into sustainable systems.",
+          title: "系統建構",
+          text: "將流程、資訊與互動整理成可持續運作的系統。",
         },
         {
           dot: "🟣",
-          title: "Experience Delivery",
-          text: "Bringing tools and experiences into real contexts to create engagement and feedback.",
+          title: "體驗落地",
+          text: "讓工具與體驗真正進入現實情境，創造參與感與回饋。",
         },
       ],
       projectsSection: {
         eyebrow: "CASE STUDIES",
-        title: "Problems & Solutions",
+        title: "問題與解法",
       },
-      projects: [
-        {
-          tag: "Workflow & Systems",
-          title: "Community Matching System",
-          description:
-            "Systemizing the matching process for community events.\n\nThrough automation and data management, this project reduces manual workload and improves the stability of matching results.",
-          button: "More",
-          imageType: "image",
-          imageSrc: communitySystemCover,
-          accent: "#4B84D9",
-          monogram: "DC",
-          targetId: "discord-matching-system",
-        },
-        {
-          tag: "Workflow & Systems",
-          title: "Administrative Workflow Automation",
-          description:
-            "Redesigning leave requests, approval and notification workflows for a campus unit.\n\nUsing Apps Script automation to reduce repetitive administrative work and improve information synchronization.",
-          button: "More",
-          imageType: "image",
-          imageSrc: leaveManagementCover,
-          accent: "#B1784F",
-          monogram: "WF",
-          targetId: "leave-reporting-system",
-        },
-        {
-          tag: "Workflow & Systems",
-          title: "Exhibitor Invitation Management System",
-          description:
-            "Building a dedicated invitation management platform for exhibition participants.\n\nIntegrating identity verification, invitation form submission and real-time list synchronization to reduce manual organization work.",
-          button: "More",
-          imageType: "image",
-          imageSrc: invitationManagementCover,
-          accent: "#6A9CF8",
-          monogram: "IV",
-          targetId: "invitation-system",
-        },
-        {
-          tag: "Workflow & Systems",
-          title: "Event Grouping System",
-          description:
-            "Creating a real-time lottery and grouping flow for brand events.\n\nCombining a host control panel with participant screens so results can be synchronized instantly on-site.",
-          button: "More",
-          imageType: "image",
-          imageSrc: groupLotteryCover,
-          accent: "#4DAA8C",
-          monogram: "GR",
-          targetId: "group-system",
-        },
-        {
-          tag: "Workflow & Systems",
-          title: "Personal Knowledge Workflow",
-          description:
-            "Building a personal knowledge system for reading, organizing and output.\n\nIntegrating AI and automation tools so knowledge can be continuously accumulated and reused.",
-          button: "More",
-          imageType: "image",
-          imageSrc: automationToolsCover,
-          accent: "#3C9D94",
-          monogram: "AU",
-          targetId: "personal-automation-tools",
-        },
-        {
-          tag: "Experience Design",
-          title: "Gesture Interaction Website",
-          description:
-            "Turning emotional awareness into a real-time interactive experience prototype.",
-          button: "More",
-          imageType: "image",
-          imageSrc: interactiveWebsiteCover,
-          accent: "#3FAF68",
-          monogram: "GI",
-          targetId: "gesture-interaction",
-        },
-        {
-          tag: "Experience Design",
-          title: "Interactive Visual Experiment",
-          description:
-            "A real-time interactive performance themed around landscape and self.\n\nBuilt with TouchDesigner to create a visual and interaction system where the image changes instantly through gestures and live control.",
-          button: "More",
-          imageType: "image",
-          imageSrc: experienceDesignCover,
-          accent: "#8D63D2",
-          monogram: "EX",
-          targetId: "interactive-exhibition",
-        },
-        {
-          tag: "Experience Design",
-          title: "E-casso Art Brand",
-          description:
-            "Turning different themes into participatory experiences.\n\nThrough art and cross-disciplinary collaboration, this project designs event formats with interaction and feedback.",
-          button: "More",
-          imageType: "image",
-          imageSrc: ecassoCover,
-          accent: "#9A5ACB",
-          monogram: "EC",
-          targetId: "e-casso-art-brand",
-        },
-      ] as ProjectCard[],
+   projects: [
+  {
+    tag: "Workflow & Systems",
+    title: "社群配對系統",
+    description:
+      "\n建立社群活動配對系統。\n讓配對流程更穩定且易於管理。",
+    button: "More",
+    imageType: "image",
+    imageSrc: communitySystemCover,
+    accent: "#4B84D9",
+    monogram: "DC",
+    targetId: "discord-matching-system",
+  },
+  {
+    tag: "Workflow & Systems",
+    title: "行政流程自動化",
+    description:
+      "\n重整校園請假與審核流程。\n減少重複行政作業與資訊落差。",
+    button: "More",
+    imageType: "image",
+    imageSrc: leaveManagementCover,
+    accent: "#B1784F",
+    monogram: "WF",
+    targetId: "leave-reporting-system",
+  },
+  {
+    tag: "Workflow & Systems",
+    title: "展覽邀請管理系統",
+    description:
+      "\n建立展覽邀請名單管理系統。\n讓名單收集與同步更有效率。",
+    button: "More",
+    imageType: "image",
+    imageSrc: invitationManagementCover,
+    accent: "#6A9CF8",
+    monogram: "IV",
+    targetId: "invitation-system",
+  },
+  {
+    tag: "Workflow & Systems",
+    title: "活動分組系統",
+    description:
+      "\n為活動設計多人即時抽籤體驗。\n同步呈現主持人與參與者結果。",
+    button: "More",
+    imageType: "image",
+    imageSrc: groupLotteryCover,
+    accent: "#4DAA8C",
+    monogram: "GR",
+    targetId: "group-system",
+  },
+  {
+    tag: "Workflow & Systems",
+    title: "個人知識工作流",
+    description:
+      "\n整合資訊與自動化流程。\n建立可持續運作的個人工作系統。",
+    button: "More",
+    imageType: "image",
+    imageSrc: automationToolsCover,
+    accent: "#3C9D94",
+    monogram: "AU",
+    targetId: "personal-automation-tools",
+  },
+  {
+    tag: "Experience Design",
+    title: "手勢互動網站",
+    description:
+      "\n將情緒探索轉化為互動體驗。\n透過手勢與畫面即時回應。",
+    button: "More",
+    imageType: "image",
+    imageSrc: interactiveWebsiteCover,
+    accent: "#3FAF68",
+    monogram: "GI",
+    targetId: "gesture-interaction",
+  },
+  {
+    tag: "Experience Design",
+    title: "互動視覺實驗",
+    description:
+      "\n以風景與自我為主題的互動展演。\n探索身體、影像與即時回饋。",
+    button: "More",
+    imageType: "image",
+    imageSrc: experienceDesignCover,
+    accent: "#8D63D2",
+    monogram: "EX",
+    targetId: "interactive-exhibition",
+  },
+  {
+    tag: "Experience Design",
+    title: "E-casso 體驗創作品牌",
+    description:
+      "\n透過體驗與創作，留下自己的想法。\n結合藝術與不同領域，探索更多可能。",
+    button: "More",
+    imageType: "image",
+    imageSrc: ecassoCover,
+    accent: "#9A5ACB",
+    monogram: "EC",
+    targetId: "e-casso-art-brand",
+  },
+] as ProjectCard[],
       aboutSection: {
         eyebrow: "ABOUT",
-        title: "About",
-        introTitle: "I am Liu Yue Tong,",
+        title: "關於我",
+        introTitle: "我是劉玥彤，",
         introText:
-          "I translate real needs into working systems and participatory experiences through AI, automation tools, workflow design and interactive experience design.\n\nI care not only about whether something works, but whether it is truly used, felt and experienced in real contexts.",
-        learningTitle: "Continuous Exploration",
+          "從真實需求出發，透過 AI、自動化工具、流程設計\n與互動體驗設計，將抽象想法轉化為可運作、\n可參與、可持續的系統與體驗。\n\n習慣從觀察與好奇心出發，\n連結不同事物，想像更多可能，\n並讓每一次體驗都比預期再多一點驚喜。",
+        learningTitle: "持續探索",
         learningText:
-          "I am currently exploring different forms of experiential possibilities through AI, automation tools, and interactive design.",
+          "目前正透過 AI 與自動化工具，\n持續嘗試不同形式的互動與體驗。",
         learningItems: [
-          "Brand LINE official account and Rich Menu design",
-          "Year-end exhibition preparation and experience ideation",
-          "Possibilities for online E-Casso interactive formats",
+          "品牌 LINE 官方帳號與 Rich Menu 設計",
+          "年底展覽籌備與體驗發想",
+          "線上 E-Casso 互動形式的可能性",
         ],
-        toolsTitle: "Tools & Skills",
+        toolsTitle: "工具與能力",
         toolGroups: [
           {
-            title: "AI & Automation",
+            title: "AI 與自動化",
             items: ["n8n", "Make", "Apps Script"],
           },
           {
-            title: "Workflow & System Design",
+            title: "流程與系統設計",
             items: ["Workflow Design", "Google Sheets", "Airtable"],
           },
           {
-            title: "Interaction & Experience Design",
+            title: "互動與體驗設計",
             items: ["TouchDesigner", "UI/UX", "Event Design"],
           },
         ] as ToolGroup[],
       },
       contactSection: {
         eyebrow: "CONTACT",
-        title: "Get in touch",
-        text: "If you're interested in my work, research direction, or potential collaboration, feel free to reach out.",
+        title: "聯絡我",
+        text: "如果你對我的專案、研究方向或合作有興趣，歡迎與我聯絡。",
         emailLabel: "EMAIL",
         instagramLabel: "INSTAGRAM",
       },
@@ -426,34 +424,13 @@ export default function HomePage() {
   const heroImages = [
   {
     src: heroCollage,
-    alt: lang === "zh" ? "作品總覽拼貼" : "Project collage",
+    alt: "作品總覽拼貼",
   },
 ];
 
-  const learningImages = [
-    {
-      src: aboutLearningDetail1,
-      alt: lang === "zh" ? "學習與探索圖片 1" : "Learning and exploration image 1",
-    },
-    {
-      src: aboutLearningDetail2,
-      alt: lang === "zh" ? "學習與探索圖片 2" : "Learning and exploration image 2",
-    },
-  ];
-
-
-  const nextLearningImage = () => {
-    setLearningImageIndex((prev) => (prev + 1) % learningImages.length);
-  };
-
-  const prevLearningImage = () => {
-    setLearningImageIndex((prev) =>
-      prev === 0 ? learningImages.length - 1 : prev - 1
-    );
-  };
-
-  const goToLearningImage = (index: number) => {
-    setLearningImageIndex(index);
+  const learningImage = {
+    src: aboutLearningDetail1,
+    alt: "學習與探索圖片",
   };
 
   return (
@@ -903,7 +880,7 @@ export default function HomePage() {
               <>
                 <button
                   onClick={() => scrollProjects("left")}
-                  aria-label={lang === "zh" ? "向左滑看更多卡片" : "Scroll left"}
+                  aria-label="向左滑看更多卡片"
                   style={{
                     position: "absolute",
                     left: 0,
@@ -926,7 +903,7 @@ export default function HomePage() {
 
                 <button
                   onClick={() => scrollProjects("right")}
-                  aria-label={lang === "zh" ? "向右滑看更多卡片" : "Scroll right"}
+                  aria-label="向右滑看更多卡片"
                   style={{
                     position: "absolute",
                     right: 0,
@@ -1167,7 +1144,7 @@ export default function HomePage() {
               >
                 <button
                   onClick={() => scrollProjects("left")}
-                  aria-label={lang === "zh" ? "向左滑看更多卡片" : "Scroll left"}
+                  aria-label="向左滑看更多卡片"
                   style={{
                     width: "40px",
                     height: "40px",
@@ -1185,7 +1162,7 @@ export default function HomePage() {
 
                 <button
                   onClick={() => scrollProjects("right")}
-                  aria-label={lang === "zh" ? "向右滑看更多卡片" : "Scroll right"}
+                  aria-label="向右滑看更多卡片"
                   style={{
                     width: "40px",
                     height: "40px",
@@ -1326,9 +1303,7 @@ export default function HomePage() {
                 >
                   <img
                     src={aboutMeImage}
-                    alt={
-                      lang === "zh" ? "劉玥彤個人照片" : "Portrait of Liu Yue Tong"
-                    }
+                    alt="劉玥彤個人照片"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -1438,8 +1413,8 @@ export default function HomePage() {
                   }}
                 >
                   <img
-                    src={learningImages[learningImageIndex].src}
-                    alt={learningImages[learningImageIndex].alt}
+                    src={learningImage.src}
+                    alt={learningImage.alt}
                     style={{
                       width: "100%",
                       height: "100%",
@@ -1448,97 +1423,6 @@ export default function HomePage() {
                       backgroundColor: "#f0f1f3",
                     }}
                   />
-
-                  <button
-                    onClick={prevLearningImage}
-                    aria-label={lang === "zh" ? "上一張圖片" : "Previous image"}
-                    style={{
-                      position: "absolute",
-                      left: "12px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      width: "36px",
-                      height: "36px",
-                      borderRadius: "999px",
-                      border: "1px solid rgba(255,255,255,0.28)",
-                      backgroundColor: "rgba(255,255,255,0.58)",
-                      backdropFilter: "blur(8px)",
-                      color: "#5f5850",
-                      fontSize: "16px",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    ←
-                  </button>
-
-                  <button
-                    onClick={nextLearningImage}
-                    aria-label={lang === "zh" ? "下一張圖片" : "Next image"}
-                    style={{
-                      position: "absolute",
-                      right: "12px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      width: "36px",
-                      height: "36px",
-                      borderRadius: "999px",
-                      border: "1px solid rgba(255,255,255,0.28)",
-                      backgroundColor: "rgba(255,255,255,0.58)",
-                      backdropFilter: "blur(8px)",
-                      color: "#5f5850",
-                      fontSize: "16px",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    →
-                  </button>
-
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "50%",
-                      bottom: "12px",
-                      transform: "translateX(-50%)",
-                      display: "flex",
-                      gap: "8px",
-                      padding: "6px 10px",
-                      borderRadius: "999px",
-                      backgroundColor: "rgba(0,0,0,0.14)",
-                      backdropFilter: "blur(6px)",
-                    }}
-                  >
-                    {learningImages.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToLearningImage(index)}
-                        aria-label={
-                          lang === "zh"
-                            ? `切換到第 ${index + 1} 張圖片`
-                            : `Go to image ${index + 1}`
-                        }
-                        style={{
-                          width: "8px",
-                          height: "8px",
-                          borderRadius: "999px",
-                          border: "none",
-                          padding: 0,
-                          backgroundColor:
-                            learningImageIndex === index
-                              ? "rgba(255,255,255,0.95)"
-                              : "rgba(255,255,255,0.45)",
-                          cursor: "pointer",
-                        }}
-                      />
-                    ))}
-                  </div>
                 </div>
               </div>
 
