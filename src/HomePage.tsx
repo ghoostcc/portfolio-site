@@ -113,7 +113,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "社群配對系統",
     description:
-      "\n\n協助管理活動參與者與配對流程。\n減少人工整理成本，提高配對效率。",
+      "\n協助管理活動參與者與配對流程。\n減少人工整理成本，提高配對效率。",
     button: "More",
     imageType: "image",
     imageSrc: communitySystemCover,
