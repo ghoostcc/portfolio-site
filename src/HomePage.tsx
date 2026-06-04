@@ -125,7 +125,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "行政流程自動化",
     description:
-      "校園請假與審核流程系統化。\n\n減少重複行政作業與資訊落差。",
+      "\n校園請假與審核流程系統化。\n減少重複行政作業與資訊落差。",
     button: "More",
     imageType: "image",
     imageSrc: leaveManagementCover,
@@ -137,7 +137,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "展覽邀請管理系統",
     description:
-      "集中管理展覽邀請資訊。\n\n讓名單收集與同步更有效率。",
+      "\n集中管理展覽邀請資訊。\n讓名單收集與同步更有效率。",
     button: "More",
     imageType: "image",
     imageSrc: invitationManagementCover,
@@ -149,7 +149,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "活動分組系統",
     description:
-      "為品牌活動建立即時抽籤與分組流程。\n\n同步呈現主持人與參與者結果。",
+      "\n為品牌活動建立即時抽籤與分組流程。\n同步呈現主持人與參與者結果。",
     button: "More",
     imageType: "image",
     imageSrc: groupLotteryCover,
@@ -161,7 +161,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "個人知識工作流",
     description:
-      "整合資訊與自動化流程。\n\n建立可持續運作的個人工作系統。",
+      "\n整合資訊與自動化流程。\n建立可持續運作的個人工作系統。",
     button: "More",
     imageType: "image",
     imageSrc: automationToolsCover,
@@ -173,7 +173,7 @@ export default function HomePage() {
     tag: "Experience Design",
     title: "手勢互動網站",
     description:
-      "將情緒探索轉化為互動體驗。\n\n透過手勢與畫面即時回應。",
+      "\n將情緒探索轉化為互動體驗。\n透過手勢與畫面即時回應。",
     button: "More",
     imageType: "image",
     imageSrc: interactiveWebsiteCover,
@@ -185,7 +185,7 @@ export default function HomePage() {
     tag: "Experience Design",
     title: "互動視覺實驗",
     description:
-      "以風景與自我為主題的即時互動展演。\n\n探索身體、影像與即時回饋。",
+      "\n以風景與自我為主題的即時互動展演。\n探索身體、影像與即時回饋。",
     button: "More",
     imageType: "image",
     imageSrc: experienceDesignCover,
@@ -197,7 +197,7 @@ export default function HomePage() {
     tag: "Experience Design",
     title: "E-casso 體驗創作品牌",
     description:
-      "透過體驗與創作，留下自己的想法。\n\n結合藝術與不同領域，探索更多可能。",
+      "\n透過體驗與創作，留下自己的想法。\n結合藝術與不同領域，探索更多可能。",
     button: "More",
     imageType: "image",
     imageSrc: ecassoCover,
