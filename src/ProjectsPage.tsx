@@ -14,6 +14,12 @@ import discordDetail1 from "./assets/images/projects/discord-matching/detail-1.p
 // leave-system
 import leaveDetail1 from "./assets/images/projects/leave-system/detail-1.png";
 
+// invitation-system
+import invitationManagementCover from "./assets/images/invitation-management-cover.png";
+
+// group-system
+import groupLotteryCover from "./assets/images/group-lottery-cover.png";
+
 // automation-tools
 import automationDetail1 from "./assets/images/projects/automation-tools/detail-1.png";
 import automationDetail2 from "./assets/images/projects/automation-tools/detail-2.png";
@@ -45,6 +51,8 @@ export default function ProjectsPage() {
     "interactive-exhibition": 0,
     "discord-matching-system": 0,
     "leave-reporting-system": 0,
+    "invitation-system": 0,
+    "group-system": 0,
     "personal-automation-tools": 0,
     "e-casso-art-brand": 0,
   });
@@ -147,6 +155,34 @@ export default function ProjectsPage() {
           ],
         },
         {
+          id: "invitation-system",
+          tag: "Workflow Tool",
+          title: "展覽邀請管理系統｜名單流程整合",
+          summary:
+            "建立展覽邀請名單管理系統，讓名單收集、資料整理與同步流程更有效率。",
+          accent: "#6A9CF8",
+          monogram: "IV",
+          introBlocks: [
+            "這個專案是為展覽籌備流程所設計，\n目的是讓邀請名單的收集、整理與後續同步更有系統。",
+            "在展覽準備期間，邀請對象、聯絡資訊與回覆狀態常常分散在不同地方，\n容易造成重複確認、資料遺漏或版本不一致的問題。\n\n因此我將邀請流程重新整理成可追蹤的資料結構，\n讓每一位邀請對象的狀態都能被清楚記錄。",
+            "透過 Google Sheets 與 Apps Script，\n系統可以協助整理名單、標記狀態，\n並降低人工同步資料時出錯的機率，\n讓展覽團隊能更專注在內容與現場體驗上。",
+          ],
+        },
+        {
+          id: "group-system",
+          tag: "Event Tool",
+          title: "活動分組系統｜即時抽籤體驗",
+          summary:
+            "為活動設計多人即時抽籤與分組流程，同步呈現主持人與參與者結果。",
+          accent: "#4DAA8C",
+          monogram: "GR",
+          introBlocks: [
+            "這個專案是為活動現場所設計的分組工具，\n目的是讓多人分組流程更快速、清楚，並帶有參與感。",
+            "在活動中，分組如果完全依靠人工安排，\n不僅需要花費時間，也容易讓現場節奏中斷。\n\n因此我設計了一套即時抽籤與分組流程，\n讓主持人可以快速啟動分組，\n參與者也能同步看到自己的分組結果。",
+            "整體設計兼顧主持端與參與端的使用情境，\n讓抽籤不只是後台作業，\n而是成為活動中的一段互動體驗，\n幫助現場流程更順暢地進行。",
+          ],
+        },
+        {
           id: "personal-automation-tools",
           tag: "Automation",
           title: "個人自動化工具｜工作流設計",
@@ -243,6 +279,34 @@ export default function ProjectsPage() {
           ],
         },
         {
+          id: "invitation-system",
+          tag: "Workflow Tool",
+          title: "Exhibition Invitation Management System | Guest List Workflow",
+          summary:
+            "A guest list management system for exhibition preparation, making invitation collection, data organization, and status syncing more efficient.",
+          accent: "#6A9CF8",
+          monogram: "IV",
+          introBlocks: [
+            "This project was designed for exhibition preparation,\nwith the goal of making guest list collection, organization, and follow-up syncing more structured.",
+            "During exhibition planning, invitee information, contact details, and response status were often scattered across different places,\nwhich could easily lead to repeated checks, missing data, or inconsistent versions.\n\nSo I reorganized the invitation process into a trackable data structure,\nmaking each invitee’s status clear and easy to manage.",
+            "Using Google Sheets and Apps Script,\nthe system helps organize guest lists, mark invitation status,\nand reduce errors during manual data syncing,\nallowing the exhibition team to focus more on content and the on-site experience.",
+          ],
+        },
+        {
+          id: "group-system",
+          tag: "Event Tool",
+          title: "Event Grouping System | Real-time Drawing Experience",
+          summary:
+            "A real-time drawing and grouping flow designed for events, showing results to both hosts and participants at the same time.",
+          accent: "#4DAA8C",
+          monogram: "GR",
+          introBlocks: [
+            "This project was designed as a grouping tool for live events,\nwith the goal of making multi-person grouping faster, clearer, and more engaging.",
+            "In events, if grouping relies entirely on manual arrangement,\nit can take time and interrupt the rhythm of the activity.\n\nSo I designed a real-time drawing and grouping flow,\nallowing the host to quickly start the grouping process\nwhile participants can also see their results immediately.",
+            "The overall design considers both the host-side and participant-side experience.\nThe drawing process is not only a back-end operation,\nbut also becomes an interactive moment within the event,\nhelping the on-site flow run more smoothly.",
+          ],
+        },
+        {
           id: "personal-automation-tools",
           tag: "Automation",
           title: "Personal Automation Tools | Workflow Design",
@@ -283,6 +347,8 @@ export default function ProjectsPage() {
       "interactive-exhibition": [exhibitionDetail1],
       "discord-matching-system": [discordDetail1],
       "leave-reporting-system": [leaveDetail1],
+      "invitation-system": [invitationManagementCover],
+      "group-system": [groupLotteryCover],
       "personal-automation-tools": [
         automationDetail1,
         automationDetail2,
