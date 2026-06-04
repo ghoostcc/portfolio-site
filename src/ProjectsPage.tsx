@@ -15,13 +15,13 @@ import discordDetail1 from "./assets/images/projects/discord-matching/detail-1.p
 import leaveDetail1 from "./assets/images/projects/leave-system/detail-1.png";
 
 // invitation-system
-import invitationManagementDetail1 from "./assets/images/invitation-management-detail1.png";
+import invitationManagementDetail1 from "./assets/images/projects/invitation-management-detail1.png";
 
 // group-system
-import groupLotteryDetail1 from "./assets/images/group-lottery-detail1.png";
-import groupLotteryDetail2 from "./assets/images/group-lottery-detail2.png";
-import groupLotteryDetail3 from "./assets/images/group-lottery-detail3.png";
-import groupLotteryDetail4 from "./assets/images/group-lottery-detail4.png";
+import groupLotteryDetail1 from "./assets/images/projects/group-lottery-detail1.png";
+import groupLotteryDetail2 from "./assets/images/projects/group-lottery-detail2.png";
+import groupLotteryDetail3 from "./assets/images/projects/group-lottery-detail3.png";
+import groupLotteryDetail4 from "./assets/images/projects/group-lottery-detail4.png";
 
 // automation-tools
 import automationDetail1 from "./assets/images/projects/automation-tools/detail-1.png";
@@ -729,50 +729,28 @@ export default function ProjectsPage() {
 
   const t = content[lang];
 
- const projectImages = useMemo<Record<string, string[]>>(
-  () => ({
-    "gesture-interaction": [
-      gestureDetail1,
-      gestureDemo,
-    ],
-
-    "interactive-exhibition": [
-      exhibitionDetail1,
-    ],
-
-    "discord-matching-system": [
-      discordDetail1,
-    ],
-
-    "leave-reporting-system": [
-      leaveDetail1,
-    ],
-
-    "invitation-system": [
-      invitationManagementDetail1,
-    ],
-
-    "group-system": [
-      groupLotteryDetail1,
-      groupLotteryDetail2,
-      groupLotteryDetail3,
-      groupLotteryDetail4,
-    ],
-
-    "personal-automation-tools": [
-      automationDetail1,
-      automationDetail2,
-      automationDemo,
-    ],
-
-    "e-casso-art-brand": [
-      ecassoDetail1,
-      ecassoDetail2,
-      ecassoDetail3,
-    ],
-  }),
-  []
-);
+  const projectImages = useMemo<Record<string, string[]>>(
+    () => ({
+      "gesture-interaction": [gestureDetail1, gestureDemo],
+      "interactive-exhibition": [exhibitionDetail1],
+      "discord-matching-system": [discordDetail1],
+      "leave-reporting-system": [leaveDetail1],
+      "invitation-system": [invitationManagementDetail1],
+      "group-system": [
+        groupLotteryDetail1,
+        groupLotteryDetail2,
+        groupLotteryDetail3,
+        groupLotteryDetail4,
+      ],
+      "personal-automation-tools": [
+        automationDetail1,
+        automationDetail2,
+        automationDemo,
+      ],
+      "e-casso-art-brand": [ecassoDetail1, ecassoDetail2, ecassoDetail3],
+    }),
+    []
+  );
 
   const nextImage = (projectId: string) => {
     const total = projectImages[projectId]?.length || 1;
