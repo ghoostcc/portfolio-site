@@ -16,6 +16,7 @@ import leaveDetail1 from "./assets/images/projects/leave-system/detail-1.png";
 
 // invitation-system
 import invitationManagementCover from "./assets/images/invitation-management-cover.png";
+import invitationManagementDetail1 from "./assets/images/projects/invitation-management-detail1.png";
 
 // group-system
 import groupLotteryCover from "./assets/images/group-lottery-cover.png";
@@ -736,7 +737,10 @@ export default function ProjectsPage() {
       "interactive-exhibition": [exhibitionDetail1],
       "discord-matching-system": [discordDetail1],
       "leave-reporting-system": [leaveDetail1],
-      "invitation-system": [invitationManagementCover],
+      "invitation-system": [
+        invitationManagementCover,
+        invitationManagementDetail1,
+      ],
       "group-system": [
         groupLotteryCover,
         groupLotteryDetail1,
@@ -897,16 +901,16 @@ export default function ProjectsPage() {
                 width: "42px",
                 height: "42px",
                 borderRadius: "999px",
-                border: "1px solid rgba(255,255,255,0.35)",
-                backgroundColor: "rgba(86, 126, 172, 0.72)",
-                backdropFilter: "blur(8px)",
-                color: "#ffffff",
+                border: "1px solid rgba(0,0,0,0.04)",
+                backgroundColor: "rgba(255,255,255,0.4)",
+                backdropFilter: "blur(10px)",
+                color: "#8a8a8a",
                 fontSize: "18px",
                 cursor: "pointer",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 8px 20px rgba(0,0,0,0.16)",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
                 zIndex: 2,
               }}
             >
