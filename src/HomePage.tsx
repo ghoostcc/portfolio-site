@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import aboutMeImage from "./assets/images/about me/me.jpg";
 import aboutLearningDetail1 from "./assets/images/about me/detail-1.png";
-import aboutLearningDetail2 from "./assets/images/about me/detail-2.png";
 import communitySystemCover from "./assets/images/Community System-cover.png";
 import ecassoCover from "./assets/images/ecasso-cover.png";
 import experienceDesignCover from "./assets/images/Experience Design-cover.png";
