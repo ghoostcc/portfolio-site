@@ -27,6 +27,8 @@ import automationDemo from "./assets/images/projects/automation-tools/demo.gif";
 
 // e-casso
 import ecassoDetail1 from "./assets/images/projects/e-casso/detail-1.png";
+import ecassoDetail2 from "./assets/images/projects/e-casso/detail-2.png";
+import ecassoDetail3 from "./assets/images/projects/e-casso/detail-3.png";
 
 type Lang = "zh" | "en";
 
@@ -737,7 +739,11 @@ export default function ProjectsPage() {
         automationDetail2,
         automationDemo,
       ],
-      "e-casso-art-brand": [ecassoDetail1],
+      "e-casso-art-brand": [
+        ecassoDetail1,
+        ecassoDetail2,
+        ecassoDetail3,
+      ],
     }),
     []
   );
