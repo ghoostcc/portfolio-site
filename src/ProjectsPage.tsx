@@ -19,10 +19,10 @@ import invitationManagementCover from "./assets/images/invitation-management-cov
 
 // group-system
 import groupLotteryCover from "./assets/images/group-lottery-cover.png";
-import groupLotteryDetail1 from "./assets/images/group-lottery-detail1.png";
-import groupLotteryDetail2 from "./assets/images/group-lottery-detail2.png";
-import groupLotteryDetail3 from "./assets/images/group-lottery-detail3.png";
-import groupLotteryDetail4 from "./assets/images/group-lottery-detail4.png";
+import groupLotteryDetail1 from "./assets/images/projects/group-lottery-detail1.png";
+import groupLotteryDetail2 from "./assets/images/projects/group-lottery-detail2.png";
+import groupLotteryDetail3 from "./assets/images/projects/group-lottery-detail3.png";
+import groupLotteryDetail4 from "./assets/images/projects/group-lottery-detail4.png";
 
 // automation-tools
 import automationDetail1 from "./assets/images/projects/automation-tools/detail-1.png";
