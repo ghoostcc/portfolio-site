@@ -113,7 +113,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "社群配對系統",
     description:
-      "建立社群活動配對系統。\n\n讓配對流程更穩定且易於管理。",
+      "協助管理活動參與者與配對流程。\n\n減少人工整理成本，提高配對效率。",
     button: "More",
     imageType: "image",
     imageSrc: communitySystemCover,
@@ -137,7 +137,7 @@ export default function HomePage() {
     tag: "Workflow & Systems",
     title: "展覽邀請管理系統",
     description:
-      "建立展覽邀請名單管理系統。\n\n讓名單收集與同步更有效率。",
+      "集中管理展覽邀請資訊。\n\n讓名單收集與同步更有效率。",
     button: "More",
     imageType: "image",
     imageSrc: invitationManagementCover,
@@ -197,7 +197,7 @@ export default function HomePage() {
     tag: "Experience Design",
     title: "E-casso 體驗創作品牌",
     description:
-      "透過體驗與創作，讓人留下自己的想法。\n\n結合藝術與不同領域，探索更多可能。",
+      "透過體驗與創作，留下自己的想法。\n\n結合藝術與不同領域，探索更多可能。",
     button: "More",
     imageType: "image",
     imageSrc: ecassoCover,
