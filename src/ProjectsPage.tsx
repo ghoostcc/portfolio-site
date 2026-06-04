@@ -30,6 +30,11 @@ import ecassoDetail1 from "./assets/images/projects/e-casso/detail-1.png";
 
 type Lang = "zh" | "en";
 
+type ProjectDetailSection = {
+  heading: string;
+  body: string[];
+};
+
 type ProjectSection = {
   id: string;
   tag: string;
@@ -37,7 +42,7 @@ type ProjectSection = {
   summary: string;
   accent: string;
   monogram: string;
-  introBlocks: string[];
+  sections: ProjectDetailSection[];
   instagramLink?: string;
 };
 
@@ -95,77 +100,179 @@ export default function ProjectsPage() {
         title: "專案整理",
       },
       backToHome: "返回首頁",
-      introLabel: "專案介紹",
+      categoryLabel: "分類",
       instagramLabel: "IG 連結",
       projects: [
         {
           id: "discord-matching-system",
-          tag: "Community System",
+          tag: "Workflow & Systems",
           title: "社群配對系統｜活動流程設計",
           summary:
-            "從配對邏輯與需求整理出發，建立一套更有效率且可持續運作的活動配對系統。",
+            "從配對邏輯與需求整理出發，建立更有效率且可持續運作的社群配對系統。",
           accent: "#4B84D9",
           monogram: "DC",
-          introBlocks: [
-            "這個專案是為 Podcast《電扶梯走左邊》的社群活動「電粉咖啡廳」所設計，\n目的是讓參與者之間的配對過程更有效率且可持續運作。",
-            "在原本的活動中，配對主要仰賴人工處理，\n不僅耗時，也容易出現重複或遺漏的情況。\n\n因此我先從「配對邏輯」與「需求」開始整理，\n建立一套能夠考慮過往紀錄與條件的配對方式，\n讓整個流程更有系統性。",
-            "初期我使用 n8n 建立自動化工作流程，\n後續為配合團隊實際使用情境，\n我改以 Google Sheets 與 Apps Script 建構系統，\n讓資料管理與操作更加直觀，\n並降低系統出錯與當機的風險。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: [
+                "為 Podcast《電扶梯走左邊》的社群活動「電粉咖啡廳」所設計，\n希望讓參與者之間的配對流程更加系統化。",
+              ],
+            },
+            {
+              heading: "遇到的問題",
+              body: [
+                "原本配對主要仰賴人工處理，\n容易耗時、遺漏資料，也難以保留配對紀錄。",
+              ],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "從「需求」與「配對邏輯」開始整理，\n建立可依照條件與偏好進行配對的流程。",
+                "初期使用 n8n 建立流程，\n後續改以 Google Sheets 與 Apps Script 重構，\n讓資料管理與操作更加直觀。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: ["降低人工處理負擔，\n讓整體配對流程更穩定且可持續運作。"],
+            },
           ],
         },
         {
           id: "leave-reporting-system",
-          tag: "Workflow Tool",
+          tag: "Workflow & Systems",
           title: "請假回報系統｜行政流程優化",
           summary:
-            "重新整理請假流程，透過表單、試算表與自動通知機制，讓行政作業更直覺且有效率。",
+            "重新整理請假流程，透過表單、試算表與自動通知機制，提升行政效率。",
           accent: "#B1784F",
           monogram: "WF",
-          introBlocks: [
-            "這個專案是為逢甲大學通識中心所設計，\n目的是讓原本繁瑣的請假流程變得更直覺且有效率。",
-            "在原有流程中，學生與老師之間需要多次來回確認，\n不僅耗時，也容易產生資訊不一致的情況。\n\n因此我重新整理整個請假流程，\n透過 Google Forms、Google Sheets 與 Apps Script，\n我建構了一套自動化流程，\n讓學生可以快速完成請假申請，\n並即時通知相關人員。",
-            "同時透過 Script 觸發器，\n系統可以在狀態變更時自動發送通知，\n讓老師與學生都能即時掌握審核結果與申請狀況。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: ["為逢甲大學通識中心所設計，\n希望改善繁瑣的請假回報流程。"],
+            },
+            {
+              heading: "遇到的問題",
+              body: ["學生與老師之間需要多次確認，\n容易造成資訊不同步與重複溝通。"],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "透過 Google Forms、Google Sheets 與 Apps Script，",
+                "建立申請、審核與通知流程，\n並在狀態變更時自動寄送通知。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: ["減少人工確認成本，\n讓學生與教師都能即時掌握申請狀況。"],
+            },
           ],
         },
         {
           id: "invitation-system",
-          tag: "Workflow Tool",
+          tag: "Workflow & Systems",
           title: "展覽邀請管理系統｜名單流程整合",
           summary:
-            "建立展覽邀請名單管理系統，讓名單收集、資料整理與同步流程更有效率。",
+            "建立展覽邀請名單管理系統，讓名單收集、整理與同步流程更有效率。",
           accent: "#6A9CF8",
           monogram: "IV",
-          introBlocks: [
-            "這個專案是為展覽籌備流程所設計，\n目的是讓邀請名單的收集、整理與後續同步更有系統。",
-            "在展覽準備期間，邀請對象、聯絡資訊與回覆狀態常常分散在不同地方，\n容易造成重複確認、資料遺漏或版本不一致的問題。\n\n因此我將邀請流程重新整理成可追蹤的資料結構，\n讓每一位邀請對象的狀態都能被清楚記錄。",
-            "透過 Google Sheets 與 Apps Script，\n系統可以協助整理名單、標記狀態，\n並降低人工同步資料時出錯的機率，\n讓展覽團隊能更專注在內容與現場體驗上。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: ["為年底多人藝術聯展籌備流程所設計，\n目的是讓邀請名單管理更有系統。"],
+            },
+            {
+              heading: "遇到的問題",
+              body: [
+                "多位參展者共同維護資料，\n容易造成重複確認、資料遺漏與版本不一致。",
+              ],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "透過 Google Sheets、Apps Script 與 Google OAuth 驗證，",
+                "參展者登入後，\n系統會確認身分並記住登入狀態。",
+                "每位參展者可自行新增邀請對象，\n並即時查看目前名單內容。",
+                "後台則能同步掌握邀請關係，\n清楚知道每位受邀者的來源。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: ["系統目前仍持續使用中，\n有效降低人工整理成本並提升資訊同步效率。"],
+            },
           ],
         },
         {
           id: "group-system",
           tag: "Event Tool",
           title: "活動分組系統｜即時抽籤體驗",
-          summary:
-            "為活動設計多人即時抽籤與分組流程，同步呈現主持人與參與者結果。",
+          summary: "為活動設計多人即時抽籤與分組流程，提升現場互動與參與感。",
           accent: "#4DAA8C",
           monogram: "GR",
-          introBlocks: [
-            "這個專案是為活動現場所設計的分組工具，\n目的是讓多人分組流程更快速、清楚，並帶有參與感。",
-            "在活動中，分組如果完全依靠人工安排，\n不僅需要花費時間，也容易讓現場節奏中斷。\n\n因此我設計了一套即時抽籤與分組流程，\n讓主持人可以快速啟動分組，\n參與者也能同步看到自己的分組結果。",
-            "整體設計兼顧主持端與參與端的使用情境，\n讓抽籤不只是後台作業，\n而是成為活動中的一段互動體驗，\n幫助現場流程更順暢地進行。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: ["為活動現場所設計的分組工具，\n希望讓多人分組更快速且具互動性。"],
+            },
+            {
+              heading: "遇到的問題",
+              body: ["傳統紙本抽籤與人工分組，\n容易耗費時間，也增加工作人員負擔。"],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "設計主持端與參與端同步的抽籤流程，",
+                "主持人能快速掌控分組，\n參與者也能即時看到結果。",
+                "讓抽籤不只是流程，\n而成為活動中的互動體驗。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: ["提升現場節奏與參與感，\n讓分組流程更加流暢。"],
+            },
           ],
         },
         {
           id: "personal-automation-tools",
-          tag: "Automation",
+          tag: "Workflow & Systems",
           title: "個人自動化工具｜工作流設計",
           summary:
-            "從閱讀紀錄到知識儲存，將日常需求拆解成可持續運作的個人工作流系統。",
+            "從閱讀紀錄到知識儲存，將日常需求拆解成可持續運作的個人工作流。",
           accent: "#3C9D94",
           monogram: "AU",
-          introBlocks: [
-            "這個專案源於我在日常使用中的需求，\n在過程中，我將需求拆分為兩個主要情境：\n「閱讀紀錄」與「知識儲存」。",
-            "在閱讀紀錄中，\n我以 LINE 官方帳號作為輸入介面，\n讓自己可以隨時記錄書籍進度、佳句與想閱讀的書單。\n\n透過 Make 建立自動化流程，\n將資料整理後傳送至 Airtable，\n並利用其關聯功能，清楚呈現閱讀進度與內容之間的關係。",
-            "在知識儲存部分，\n我以 Google Sheets 與 Apps Script 為基礎，\n並結合手機捷徑功能，\n讓我能在各個平台透過「分享」快速儲存內容。\n\n同時在紀錄時加入簡單說明，\n減少過去隨意收藏卻難以再利用的問題。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: [
+                "源自於日常閱讀與資訊整理需求，",
+                "希望建立一套能夠快速記錄、\n整理與回顧內容的個人系統。",
+              ],
+            },
+            {
+              heading: "遇到的問題",
+              body: [
+                "閱讀內容、靈感與收藏資訊散落在不同平台，",
+                "長期累積後，\n容易出現難以回顧與重新利用的情況。",
+              ],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "【閱讀紀錄】\n\n以 LINE 官方帳號作為輸入介面，",
+                "透過 Make 建立自動化流程，\n將閱讀進度、書籍內容與想法整理至 Airtable，",
+                "並利用關聯功能建立內容之間的連結。",
+                "───",
+                "【知識儲存】\n\n以 Google Sheets 與 Apps Script 為基礎，",
+                "並結合手機捷徑功能，\n讓我能在各平台透過「分享」快速儲存內容。",
+                "同時加入簡單說明，\n減少過去隨意收藏卻難以再利用的問題。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: [
+                "建立持續演化中的個人工作流，",
+                "讓資訊不只是被收藏，\n而能在需要時重新被找到與利用。",
+              ],
+            },
           ],
         },
         {
@@ -173,13 +280,37 @@ export default function ProjectsPage() {
           tag: "Interactive Experience",
           title: "手勢互動體驗｜情緒覺察",
           summary:
-            "結合實體票券、數位互動與手勢操作，將抽象情緒轉化為可被看見與感受的變化。",
+            "結合實體票券、數位互動與手勢操作，將情緒轉化為可被看見與感受的變化。",
           accent: "#3FAF68",
           monogram: "GI",
-          introBlocks: [
-            "在與人生教練合辦的活動中，\n我設計了一套結合「實體票券」與「數位互動」的體驗流程，",
-            "參與者透過票券上的條碼對準現場電腦鏡頭，\n我透過手機進行遠端控制，作為互動流程的控制端，\n並結合手勢操作即時影響畫面中的角色狀態\n讓「抽象情緒」轉化為可以被看見與感受的變化。",
-            "整體體驗串連「進場 → 互動 → 結束」，\n形成一個完整的參與流程。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: [
+                "於與人生教練合作的活動中，",
+                "設計結合「實體票券」與「數位互動」的體驗流程。",
+              ],
+            },
+            {
+              heading: "遇到的問題",
+              body: ["抽象的情緒感受不容易被表達，", "也難以在活動中形成共同體驗。"],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "參與者先透過票券上的條碼進行驗證，",
+                "再透過手機進行遠端控制，",
+                "並以手勢操作即時影響畫面中的角色狀態，",
+                "讓情緒變化能被看見與感受。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: [
+                "形成「進場 → 互動 → 結束」的完整體驗流程，",
+                "讓抽象情緒成為可參與的互動體驗。",
+              ],
+            },
           ],
         },
         {
@@ -187,28 +318,77 @@ export default function ProjectsPage() {
           tag: "Experience Design",
           title: "互動視覺實驗｜TouchDesigner",
           summary:
-            "以個人感受為起點，結合互動視覺與空間 mapping，讓觀看成為可以被參與的展演體驗。",
+            "以個人感受為起點，結合互動視覺與空間 Mapping，讓觀看成為可參與的展演體驗。",
           accent: "#8D63D2",
           monogram: "TD",
-          introBlocks: [
-            "在 TouchDesigner 工作坊中，\n我以「我所觀看的風景」與「我是誰」為主題，\n嘗試將個人的感受轉化為可被操作的互動視覺。",
-            "我以現場的方盒子作為載體進行 mapping，\n讓畫面不只是呈現，而是與空間產生關係，\n成為一個可以被觀看與參與的展演裝置。",
-            "整體設計包含三個主要互動：\n\n1. 啟動機制\n透過手機遙控觸發，作為整個展演的開始，\n讓觀眾從一個明確的「進入點」進入體驗。\n\n2. 風景互動\n將台中地標轉化為視覺素材，\n觀眾可以透過手勢切換畫面，並進行放大與縮小，\n在互動中重新觀看熟悉的風景。\n\n3. 藝術表達\n透過手機觸控操作，在畫面中生成筆觸，\n讓使用者能直接在作品上留下痕跡，\n形成一種即時的創作與參與。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: [
+                "於 TouchDesigner 工作坊中，",
+                "以「我所觀看的風景」與「我是誰」為主題，\n嘗試將個人感受轉化為互動裝置。",
+              ],
+            },
+            {
+              heading: "遇到的問題",
+              body: ["傳統展示多以單向觀看為主，", "觀眾較難與作品建立連結。"],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "以現場方盒子作為載體進行 Mapping，",
+                "設計三個主要互動：",
+                "1. 啟動機制\n透過手機遙控作為進場方式。",
+                "2. 展區互動\n以手勢切換畫面、縮放內容。",
+                "3. 藝術表達\n透過手勢生成筆觸，\n讓觀者能直接參與作品。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: [
+                "讓畫面不只是展示，",
+                "而是與空間產生關係，\n形成可被觀看與參與的展演體驗。",
+              ],
+            },
           ],
         },
         {
           id: "e-casso-art-brand",
           tag: "Brand / Event",
-          title: "E-casso 藝術品牌｜體驗轉譯與活動設計",
+          title: "E-casso 體驗創作品牌｜體驗轉譯與活動設計",
           summary:
-            "以藝術作為媒介，將抽象主題轉化為可以被參與、互動與感受的活動體驗。",
+            "以藝術作為媒介，將抽象主題轉化為可被參與、互動與感受的活動體驗。",
           accent: "#9A5ACB",
           monogram: "EC",
           instagramLink: "https://www.instagram.com/ecasso_acy/",
-          introBlocks: [
-            "E-casso 是一個以藝術作為媒介的體驗品牌，\n致力於將不同主題轉化為可以被參與與感受的形式。",
-            "在每一次活動中，我們會從一個主題出發，\n思考如何將其轉譯為「可以被創作與互動」的體驗，\n讓參與者不是被動接收，而是在過程中實際參與。\n\n過去的主題包含 AI × 音樂（Suno）、英文對話社群、瑪雅圖騰等，\n將原本抽象或知識性的內容轉化為可被感受的活動形式。",
-            "在設計活動時，\n我特別關注整體參與流程與現場氛圍，\n從內容安排到互動環節，\n都會思考如何讓體驗具有回饋與層次。\n\n同時也透過「超乎常理的款待」與細節設計，\n在過程中創造驚喜，\n讓參與者在體驗之後能留下更深刻的感受。",
+          sections: [
+            {
+              heading: "專案背景",
+              body: [
+                "E-casso 是一個以藝術作為媒介的體驗品牌，",
+                "希望透過不同主題，\n創造具有參與感的活動內容。",
+              ],
+            },
+            {
+              heading: "遇到的問題",
+              body: ["抽象概念往往難以被感受，", "參與者容易停留在被動接收資訊。"],
+            },
+            {
+              heading: "我的解法",
+              body: [
+                "從主題出發，",
+                "思考如何將內容轉譯為可互動的體驗。",
+                "過去主題包含：\n\n• AI × 音樂（Suno）\n• 英文對話社群\n• 瑪雅圖騰\n• 超乎常理的款待設計",
+                "讓參與者在活動過程中實際參與，\n而非只是被動接收。",
+              ],
+            },
+            {
+              heading: "成果",
+              body: [
+                "逐漸建立以「藝術 × 體驗 × 互動」為核心的品牌方向，",
+                "並持續探索更多跨領域的活動可能。",
+              ],
+            },
           ],
         },
       ] as ProjectSection[],
@@ -219,49 +399,117 @@ export default function ProjectsPage() {
         title: "Projects",
       },
       backToHome: "Back to Home",
-      introLabel: "Project Overview",
+      categoryLabel: "Category",
       instagramLabel: "Instagram",
       projects: [
         {
           id: "discord-matching-system",
-          tag: "Community System",
+          tag: "Workflow & Systems",
           title: "Community Matching System | Event Flow Design",
           summary:
-            "A matching system built from workflow logic and participant needs to make community events more efficient and sustainable.",
+            "Starting from matching logic and user needs, I built a more efficient and sustainable community matching system.",
           accent: "#4B84D9",
           monogram: "DC",
-          introBlocks: [
-            "This project was designed for the community event “電粉咖啡廳” by the podcast 《電扶梯走左邊》,\nwith the goal of making participant matching more efficient and sustainable.",
-            "Originally, the matching process relied heavily on manual work,\nwhich was time-consuming and prone to duplication or omissions.\n\nSo I first organized the matching logic and user needs,\nand built a system that could take previous records and conditions into account.",
-            "At first, I used n8n to build the automation workflow.\nLater, to better fit the team’s real use case,\nI rebuilt the system with Google Sheets and Apps Script,\nwhich made data handling more intuitive\nand reduced the risk of errors or crashes.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "Designed for the podcast community event “電粉咖啡廳” by 《電扶梯走左邊》,\nthis project aimed to make participant matching more systematic.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "The original matching process relied mainly on manual work,\nwhich was time-consuming, easy to miss data, and difficult to preserve matching records.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "I started by organizing the user needs and matching logic,\nand built a flow that could match participants based on conditions and preferences.",
+                "I first used n8n to create the workflow,\nthen rebuilt it with Google Sheets and Apps Script\nto make data management and operation more intuitive.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The system reduced manual workload\nand made the overall matching process more stable and sustainable.",
+              ],
+            },
           ],
         },
         {
           id: "leave-reporting-system",
-          tag: "Workflow Tool",
+          tag: "Workflow & Systems",
           title: "Leave Reporting System | Administrative Flow Optimization",
           summary:
-            "A redesigned leave process using forms, sheets, and automated notifications to make administrative work more intuitive and efficient.",
+            "I reorganized the leave reporting process and improved administrative efficiency through forms, spreadsheets, and automated notifications.",
           accent: "#B1784F",
           monogram: "WF",
-          introBlocks: [
-            "This project was designed for the General Education Center at Feng Chia University,\nwith the goal of making the original leave request process more intuitive and efficient.",
-            "In the original process, students and teachers had to confirm information back and forth multiple times,\nwhich was time-consuming and often led to inconsistent information.\n\nSo I reorganized the whole leave process\nand built an automated flow using Google Forms, Google Sheets, and Apps Script.",
-            "With script triggers,\nthe system could automatically send notifications whenever the status changed,\nso both teachers and students could stay updated on the application and review result in real time.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "Designed for the General Education Center at Feng Chia University,\nthis project aimed to improve a complicated leave reporting workflow.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Students and teachers had to confirm information back and forth multiple times,\nwhich often caused information gaps and repeated communication.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "Using Google Forms, Google Sheets, and Apps Script,",
+                "I built an application, review, and notification workflow,\nwith automatic email notifications triggered when the status changed.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The system reduced the cost of manual confirmation\nand allowed both students and teachers to track application status in real time.",
+              ],
+            },
           ],
         },
         {
           id: "invitation-system",
-          tag: "Workflow Tool",
-          title: "Exhibition Invitation Management System | Guest List Workflow",
+          tag: "Workflow & Systems",
+          title: "Exhibition Invitation Management System | Guest List Workflow Integration",
           summary:
-            "A guest list management system for exhibition preparation, making invitation collection, data organization, and status syncing more efficient.",
+            "I built an exhibition invitation management system to make guest list collection, organization, and synchronization more efficient.",
           accent: "#6A9CF8",
           monogram: "IV",
-          introBlocks: [
-            "This project was designed for exhibition preparation,\nwith the goal of making guest list collection, organization, and follow-up syncing more structured.",
-            "During exhibition planning, invitee information, contact details, and response status were often scattered across different places,\nwhich could easily lead to repeated checks, missing data, or inconsistent versions.\n\nSo I reorganized the invitation process into a trackable data structure,\nmaking each invitee’s status clear and easy to manage.",
-            "Using Google Sheets and Apps Script,\nthe system helps organize guest lists, mark invitation status,\nand reduce errors during manual data syncing,\nallowing the exhibition team to focus more on content and the on-site experience.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "Designed for the preparation process of a year-end group art exhibition,\nthis project aimed to make invitation list management more systematic.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Multiple exhibitors maintained the data together,\nwhich easily led to repeated checks, missing information, and inconsistent versions.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "Using Google Sheets, Apps Script, and Google OAuth authentication,",
+                "after exhibitors log in,\nthe system verifies their identity and remembers the login status.",
+                "Each exhibitor can add their own invitees\nand view the current guest list in real time.",
+                "The backend can also track invitation relationships\nand clearly identify the source of each invited guest.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The system is still in use,\neffectively reducing manual organization costs and improving information synchronization efficiency.",
+              ],
+            },
           ],
         },
         {
@@ -269,27 +517,80 @@ export default function ProjectsPage() {
           tag: "Event Tool",
           title: "Event Grouping System | Real-time Drawing Experience",
           summary:
-            "A real-time drawing and grouping flow designed for events, showing results to both hosts and participants at the same time.",
+            "I designed a real-time drawing and grouping flow for events to improve on-site interaction and participation.",
           accent: "#4DAA8C",
           monogram: "GR",
-          introBlocks: [
-            "This project was designed as a grouping tool for live events,\nwith the goal of making multi-person grouping faster, clearer, and more engaging.",
-            "In events, if grouping relies entirely on manual arrangement,\nit can take time and interrupt the rhythm of the activity.\n\nSo I designed a real-time drawing and grouping flow,\nallowing the host to quickly start the grouping process\nwhile participants can also see their results immediately.",
-            "The overall design considers both the host-side and participant-side experience.\nThe drawing process is not only a back-end operation,\nbut also becomes an interactive moment within the event,\nhelping the on-site flow run more smoothly.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "Designed as a grouping tool for live events,\nthis project aimed to make multi-person grouping faster and more interactive.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Traditional paper-based drawing and manual grouping\ncan take time and increase the workload for event staff.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "I designed a synchronized drawing flow for both host and participants.",
+                "The host can quickly control the grouping process,\nwhile participants can see their results immediately.",
+                "The drawing process becomes not only a procedure,\nbut also an interactive moment in the event.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The system improved the on-site rhythm and sense of participation,\nmaking the grouping process smoother.",
+              ],
+            },
           ],
         },
         {
           id: "personal-automation-tools",
-          tag: "Automation",
+          tag: "Workflow & Systems",
           title: "Personal Automation Tools | Workflow Design",
           summary:
-            "A personal workflow system built from daily needs, covering reading records and knowledge capture.",
+            "From reading records to knowledge storage, I broke daily needs into a sustainable personal workflow.",
           accent: "#3C9D94",
           monogram: "AU",
-          introBlocks: [
-            "This project came from my everyday needs.\nDuring the process, I divided those needs into two main scenarios:\n“reading records” and “knowledge storage.”",
-            "For reading records,\nI used a LINE official account as the input interface,\nso I could record reading progress, quotes, and future reading lists anytime.\n\nThrough Make,\nthe data was organized and sent to Airtable,\nwhere relational fields helped make the structure and progress clearer.",
-            "For knowledge storage,\nI used Google Sheets and Apps Script as the foundation,\nand combined them with mobile shortcuts,\nso I could quickly save content from different platforms through the share action.\n\nI also added simple notes during capture,\nwhich reduced the problem of saving things casually but not being able to use them later.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "This project came from my daily needs for reading and information organization.",
+                "I wanted to build a personal system\nthat could quickly record, organize, and review content.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Reading notes, ideas, and saved information were scattered across different platforms.",
+                "As they accumulated over time,\nit became difficult to review and reuse them.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "【Reading Records】\n\nI used a LINE Official Account as the input interface.",
+                "Through Make, I built an automated workflow\nthat organized reading progress, book content, and thoughts into Airtable.",
+                "I also used relational fields to create links between different pieces of content.",
+                "───",
+                "【Knowledge Storage】\n\nUsing Google Sheets and Apps Script as the foundation,",
+                "combined with mobile shortcuts,\nI can quickly save content from different platforms through the share action.",
+                "I also added short notes during capture\nto reduce the problem of casually saving things that are hard to reuse later.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "I built an evolving personal workflow,",
+                "so information is not only saved,\nbut can be found and reused when needed.",
+              ],
+            },
           ],
         },
         {
@@ -297,13 +598,40 @@ export default function ProjectsPage() {
           tag: "Interactive Experience",
           title: "Gesture Interaction Experience | Emotional Awareness",
           summary:
-            "Combining physical tickets, digital interaction, and gesture input to turn abstract emotions into visible and perceivable changes.",
+            "Combining physical tickets, digital interaction, and gesture input, this project turns emotions into visible and perceivable changes.",
           accent: "#3FAF68",
           monogram: "GI",
-          introBlocks: [
-            "In a co-hosted event with a life coach,\nI designed an experience flow that combined physical tickets and digital interaction.",
-            "Participants aligned the barcode on their ticket with the on-site computer camera.\nI used my phone as the remote control side of the interaction flow,\nand combined gesture input to affect the character state on screen in real time,\nturning abstract emotions into visible and perceivable changes.",
-            "The whole experience connected entry → interaction → ending,\nforming a complete participation flow.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "In an event co-created with a life coach,",
+                "I designed an experience flow that combined physical tickets and digital interaction.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Abstract emotional feelings are not easy to express,",
+                "and they are also difficult to turn into a shared experience during an event.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "Participants first verified their entry through the barcode on the ticket.",
+                "Then I used a phone for remote control,",
+                "and gesture input affected the character state on screen in real time,",
+                "making emotional changes visible and perceivable.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The project formed a complete experience flow of entry → interaction → ending,",
+                "turning abstract emotions into an interactive experience that people could participate in.",
+              ],
+            },
           ],
         },
         {
@@ -314,25 +642,80 @@ export default function ProjectsPage() {
             "Starting from personal perception, this project combines interactive visuals and spatial mapping to turn viewing into a participatory performance experience.",
           accent: "#8D63D2",
           monogram: "TD",
-          introBlocks: [
-            "In a TouchDesigner workshop,\nI explored the themes of “the landscapes I see” and “who I am”,\ntrying to transform personal feelings into interactive visuals.",
-            "I used a box in the physical space as the mapping object,\nso the visuals were not only displayed,\nbut also connected to the surrounding space and became part of a participatory installation.",
-            "The design included three main interactions:\n\n1. Triggering mechanism\nActivated by mobile remote control as the entry point of the experience.\n\n2. Landscape interaction\nTaichung landmarks were transformed into visual material,\nand users could switch, zoom in, and zoom out through gestures.\n\n3. Artistic expression\nThrough mobile touch input, users could generate brush strokes on the screen,\nleaving traces directly on the work as a form of live participation.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "In a TouchDesigner workshop,",
+                "I used the themes of “the landscapes I see” and “who I am”\nto explore how personal perception could become an interactive installation.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Traditional exhibitions are often based on one-way viewing,",
+                "making it harder for audiences to build a connection with the work.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "I used boxes in the physical space as the mapping surface.",
+                "The design included three main interactions:",
+                "1. Trigger Mechanism\nA mobile remote control served as the entry method.",
+                "2. Exhibition Interaction\nGestures were used to switch screens and zoom content in or out.",
+                "3. Artistic Expression\nGestures generated brush strokes,\nallowing viewers to directly participate in the work.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The visuals became more than a display.",
+                "They formed a relationship with the space\nand created a performance experience that could be both viewed and participated in.",
+              ],
+            },
           ],
         },
         {
           id: "e-casso-art-brand",
           tag: "Brand / Event",
-          title: "E-casso Art Brand | Experience Translation & Event Design",
+          title: "E-casso Experience Creation Brand | Experience Translation & Event Design",
           summary:
-            "An experience brand that uses art as a medium to translate abstract themes into participatory and interactive event formats.",
+            "Using art as a medium, this brand translates abstract themes into event experiences that can be participated in, interacted with, and felt.",
           accent: "#9A5ACB",
           monogram: "EC",
           instagramLink: "https://www.instagram.com/ecasso_acy/",
-          introBlocks: [
-            "E-casso is an experience brand that uses art as its medium,\ndedicated to transforming different themes into forms that can be participated in and felt.",
-            "In each event, we start from a theme\nand think about how to translate it into an experience that can be created and interacted with,\nso participants are not passive receivers but active participants in the process.\n\nPast themes include AI × Music (Suno), English conversation communities, and Mayan totems.",
-            "When designing events,\nI pay close attention to the full participation flow and the atmosphere on site.\nFrom content arrangement to interaction segments,\nI think about how to create layers and feedback within the experience.\n\nAt the same time,\nthrough unexpected hospitality and detail design,\nI try to create moments of surprise that leave a deeper impression after the event.",
+          sections: [
+            {
+              heading: "Project Background",
+              body: [
+                "E-casso is an experience brand that uses art as its medium.",
+                "Through different themes,\nit aims to create event content with a sense of participation.",
+              ],
+            },
+            {
+              heading: "Problem",
+              body: [
+                "Abstract concepts are often difficult to feel,",
+                "and participants can easily remain passive receivers of information.",
+              ],
+            },
+            {
+              heading: "My Solution",
+              body: [
+                "Starting from each theme,",
+                "I think about how to translate the content into an interactive experience.",
+                "Past themes include:\n\n• AI × Music (Suno)\n• English conversation community\n• Mayan totems\n• Unexpected hospitality design",
+                "Participants are encouraged to take part in the process,\nrather than only receiving information passively.",
+              ],
+            },
+            {
+              heading: "Outcome",
+              body: [
+                "The brand direction has gradually developed around art × experience × interaction,",
+                "and continues to explore more cross-disciplinary event possibilities.",
+              ],
+            },
           ],
         },
       ] as ProjectSection[],
@@ -738,12 +1121,30 @@ export default function ProjectsPage() {
                   style={{
                     padding: isMobile ? "2px 2px 4px" : "10px 8px 10px 0",
                     display: "grid",
-                    gap: "28px",
+                    gap: "24px",
                     alignContent: "start",
                     textAlign: "left",
                   }}
                 >
                   <div style={{ textAlign: "left" }}>
+                    <div
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "7px 12px",
+                        borderRadius: "999px",
+                        backgroundColor: `${project.accent}18`,
+                        color: "#5f584f",
+                        fontSize: "12px",
+                        fontWeight: 700,
+                        letterSpacing: "0.04em",
+                        marginBottom: "14px",
+                      }}
+                    >
+                      {t.categoryLabel}：{project.tag}
+                    </div>
+
                     <h2
                       style={{
                         margin: "0 0 14px 0",
@@ -764,7 +1165,7 @@ export default function ProjectsPage() {
                         fontSize: isMobile ? "16px" : "17px",
                         lineHeight: 1.95,
                         color: "#6b655d",
-                        fontWeight: 400,
+                        fontWeight: 500,
                         textAlign: "left",
                         maxWidth: "540px",
                       }}
@@ -773,93 +1174,105 @@ export default function ProjectsPage() {
                     </p>
                   </div>
 
+                  {project.instagramLink && (
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: isMobile ? "column" : "row",
+                        alignItems: isMobile ? "flex-start" : "center",
+                        gap: "8px",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "14px",
+                          color: "#6b655d",
+                          fontWeight: 600,
+                        }}
+                      >
+                        {t.instagramLabel}
+                      </span>
+
+                      <a
+                        href={project.instagramLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                          fontSize: "14px",
+                          color: "#7d5fbc",
+                          textDecoration: "none",
+                          wordBreak: "break-all",
+                        }}
+                      >
+                        {project.instagramLink}
+                      </a>
+                    </div>
+                  )}
+
                   <div
                     style={{
                       display: "grid",
-                      gap: "18px",
+                      gap: "22px",
                       textAlign: "left",
                     }}
                   >
-                    <h3
-                      style={{
-                        margin: 0,
-                        fontSize: "16px",
-                        lineHeight: 1.4,
-                        color: "#2d2d2d",
-                        fontWeight: 600,
-                        letterSpacing: "0.02em",
-                        textAlign: "left",
-                      }}
-                    >
-                      {t.introLabel}
-                    </h3>
-
-                    {project.instagramLink && (
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: isMobile ? "column" : "row",
-                          alignItems: isMobile ? "flex-start" : "center",
-                          gap: "8px",
-                        }}
-                      >
-                        <span
-                          style={{
-                            fontSize: "14px",
-                            color: "#6b655d",
-                            fontWeight: 600,
-                          }}
-                        >
-                          {t.instagramLabel}
-                        </span>
-
-                        <a
-                          href={project.instagramLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          style={{
-                            fontSize: "14px",
-                            color: "#7d5fbc",
-                            textDecoration: "none",
-                            wordBreak: "break-all",
-                          }}
-                        >
-                          {project.instagramLink}
-                        </a>
-                      </div>
-                    )}
-
-                    {project.introBlocks.map((block, index) => (
-                      <div
-                        key={`${project.id}-block-${index}`}
+                    {project.sections.map((section, sectionIndex) => (
+                      <section
+                        key={`${project.id}-section-${sectionIndex}`}
                         style={{
                           display: "grid",
-                          gap: "18px",
+                          gap: "12px",
+                          paddingTop: sectionIndex === 0 ? 0 : "6px",
                         }}
                       >
-                        <p
-                          style={{
-                            margin: 0,
-                            fontSize: "16px",
-                            lineHeight: 2.05,
-                            color: "#4f4a43",
-                            whiteSpace: "pre-line",
-                            textAlign: "left",
-                          }}
-                        >
-                          {block}
-                        </p>
-
-                        {index < project.introBlocks.length - 1 && (
+                        {sectionIndex > 0 && (
                           <div
                             style={{
-                              width: "36px",
+                              width: "100%",
                               height: "1px",
-                              backgroundColor: "rgba(95, 86, 74, 0.28)",
+                              backgroundColor: "rgba(95, 86, 74, 0.18)",
+                              marginBottom: "2px",
                             }}
                           />
                         )}
-                      </div>
+
+                        <h3
+                          style={{
+                            margin: 0,
+                            fontSize: "16px",
+                            lineHeight: 1.4,
+                            color: "#2d2d2d",
+                            fontWeight: 700,
+                            letterSpacing: "0.02em",
+                            textAlign: "left",
+                          }}
+                        >
+                          {section.heading}
+                        </h3>
+
+                        <div
+                          style={{
+                            display: "grid",
+                            gap: "12px",
+                          }}
+                        >
+                          {section.body.map((paragraph, paragraphIndex) => (
+                            <p
+                              key={`${project.id}-section-${sectionIndex}-paragraph-${paragraphIndex}`}
+                              style={{
+                                margin: 0,
+                                fontSize: "16px",
+                                lineHeight: 2.05,
+                                color: "#4f4a43",
+                                whiteSpace: "pre-line",
+                                textAlign: "left",
+                              }}
+                            >
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
+                      </section>
                     ))}
                   </div>
                 </div>
