@@ -244,49 +244,49 @@ export default function HomePage() {
     },
     en: {
       nav: {
-        projects: "專案",
-        about: "關於我",
-        contact: "聯絡",
+        projects: "Projects",
+        about: "About",
+        contact: "Contact",
       },
       hero: {
         eyebrow: "EXPERIENCE TRANSLATOR",
         title: "LIU YUE TONG",
-        subtitle: "將需求、流程與想法，\n轉化為可運作的系統與體驗。",
+        subtitle: "Turning needs, workflows, and ideas\ninto functional systems and experiences.",
         highlights: [
-           "行政流程自動化",
-           "社群配對系統",
-           "個人知識工作流",
-           "互動展覽體驗",
+           "Administrative workflow automation",
+           "Community matching systems",
+           "Personal knowledge workflows",
+           "Interactive exhibition experiences",
         ],
-        primaryButton: "查看專案",
+        primaryButton: "View Projects",
       },
       cards: [
         {
           dot: "🟢",
-          title: "需求轉譯",
-          text: "從抽象想法與真實需求出發，快速建立可測試的 Prototype。",
+          title: "Translating Needs",
+          text: "Starting from real needs and abstract ideas, I quickly build prototypes that can be tested.",
         },
         {
           dot: "🔵",
-          title: "系統建構",
-          text: "將流程、資訊與互動整理成可持續運作的系統。",
+          title: "Building Systems",
+          text: "I organize workflows, information, and interactions into systems that can keep running over time.",
         },
         {
           dot: "🟣",
-          title: "體驗落地",
-          text: "讓工具與體驗真正進入現實情境，創造參與感與回饋。",
+          title: "Bringing Experiences to Life",
+          text: "I bring tools and experiences into real contexts, creating engagement and meaningful feedback.",
         },
       ],
       projectsSection: {
         eyebrow: "CASE STUDIES",
-        title: "問題與解法",
+        title: "Problems & Solutions",
       },
    projects: [
   {
     tag: "Workflow & Systems",
-    title: "社群配對系統",
+    title: "Community Matching System",
     description:
-      "\n建立社群活動配對系統。\n讓配對流程更穩定且易於管理。",
+      "\nBuilt a matching system for community events.\nMade the matching process more stable and easier to manage.",
     button: "More",
     imageType: "image",
     imageSrc: communitySystemCover,
@@ -296,9 +296,9 @@ export default function HomePage() {
   },
   {
     tag: "Workflow & Systems",
-    title: "行政流程自動化",
+    title: "Administrative Workflow Automation",
     description:
-      "\n重整校園請假與審核流程。\n減少重複行政作業與資訊落差。",
+      "\nRedesigned the campus leave and approval process.\nReduced repetitive administrative work and information gaps.",
     button: "More",
     imageType: "image",
     imageSrc: leaveManagementCover,
@@ -308,9 +308,9 @@ export default function HomePage() {
   },
   {
     tag: "Workflow & Systems",
-    title: "展覽邀請管理系統",
+    title: "Exhibition Invitation Management System",
     description:
-      "\n建立展覽邀請名單管理系統。\n讓名單收集與同步更有效率。",
+      "\nBuilt a system for managing exhibition invitation lists.\nMade list collection and synchronization more efficient.",
     button: "More",
     imageType: "image",
     imageSrc: invitationManagementCover,
@@ -320,9 +320,9 @@ export default function HomePage() {
   },
   {
     tag: "Workflow & Systems",
-    title: "活動分組系統",
+    title: "Event Grouping System",
     description:
-      "\n為活動設計多人即時抽籤體驗。\n同步呈現主持人與參與者結果。",
+      "\nDesigned a real-time group drawing experience for events.\nDisplayed results simultaneously for hosts and participants.",
     button: "More",
     imageType: "image",
     imageSrc: groupLotteryCover,
@@ -332,9 +332,9 @@ export default function HomePage() {
   },
   {
     tag: "Workflow & Systems",
-    title: "個人知識工作流",
+    title: "Personal Knowledge Workflow",
     description:
-      "\n整合資訊與自動化流程。\n建立可持續運作的個人工作系統。",
+      "\nIntegrated information and automation workflows.\nBuilt a sustainable personal working system.",
     button: "More",
     imageType: "image",
     imageSrc: automationToolsCover,
@@ -344,9 +344,9 @@ export default function HomePage() {
   },
   {
     tag: "Experience Design",
-    title: "手勢互動網站",
+    title: "Gesture Interactive Website",
     description:
-      "\n將情緒探索轉化為互動體驗。\n透過手勢與畫面即時回應。",
+      "\nTurned emotional exploration into an interactive experience.\nResponded in real time through gestures and visuals.",
     button: "More",
     imageType: "image",
     imageSrc: interactiveWebsiteCover,
@@ -356,9 +356,9 @@ export default function HomePage() {
   },
   {
     tag: "Experience Design",
-    title: "互動視覺實驗",
+    title: "Interactive Visual Experiment",
     description:
-      "\n以風景與自我為主題的互動展演。\n探索身體、影像與即時回饋。",
+      "\nAn interactive performance themed around landscape and the self.\nExplored the body, images, and real-time feedback.",
     button: "More",
     imageType: "image",
     imageSrc: experienceDesignCover,
@@ -368,9 +368,9 @@ export default function HomePage() {
   },
   {
     tag: "Experience Design",
-    title: "E-casso 體驗創作品牌",
+    title: "E-casso Experiential Creative Brand",
     description:
-      "\n透過體驗與創作，留下自己的想法。\n結合藝術與不同領域，探索更多可能。",
+      "\nUses experiences and creation to help people leave their own thoughts behind.\nCombines art with different fields to explore more possibilities.",
     button: "More",
     imageType: "image",
     imageSrc: ecassoCover,
@@ -381,38 +381,38 @@ export default function HomePage() {
 ] as ProjectCard[],
       aboutSection: {
         eyebrow: "ABOUT",
-        title: "關於我",
-        introTitle: "我是劉玥彤，",
+        title: "About Me",
+        introTitle: "I’m Liu Yue Tong,",
         introText:
-          "從真實需求出發，透過 AI、自動化工具、流程設計\n與互動體驗設計，將抽象想法轉化為可運作、\n可參與、可持續的系統與體驗。\n\n習慣從觀察與好奇心出發，\n連結不同事物，想像更多可能，\n並讓每一次體驗都比預期再多一點驚喜。",
-        learningTitle: "持續探索",
+          "Starting from real needs, I use AI, automation tools, workflow design,\nand interactive experience design to turn abstract ideas into systems and experiences\nthat are functional, participatory, and sustainable.\n\nI often begin with observation and curiosity,\nconnect different things, imagine new possibilities,\nand make every experience a little more surprising than expected.",
+        learningTitle: "Continuous Exploration",
         learningText:
-          "目前正透過 AI 與自動化工具，\n持續嘗試不同形式的互動與體驗。",
+          "I am currently using AI and automation tools\nto keep experimenting with different forms of interaction and experience.",
         learningItems: [
-          "品牌 LINE 官方帳號與 Rich Menu 設計",
-          "年底展覽籌備與體驗發想",
-          "線上 E-Casso 互動形式的可能性",
+          "Brand LINE Official Account and Rich Menu design",
+          "Year-end exhibition planning and experience ideation",
+          "Possible online interactive formats for E-Casso",
         ],
-        toolsTitle: "工具與能力",
+        toolsTitle: "Tools & Skills",
         toolGroups: [
           {
-            title: "AI 與自動化",
+            title: "AI & Automation",
             items: ["n8n", "Make", "Apps Script"],
           },
           {
-            title: "流程與系統設計",
+            title: "Workflow & System Design",
             items: ["Workflow Design", "Google Sheets", "Airtable"],
           },
           {
-            title: "互動與體驗設計",
+            title: "Interaction & Experience Design",
             items: ["TouchDesigner", "UI/UX", "Event Design"],
           },
         ] as ToolGroup[],
       },
       contactSection: {
         eyebrow: "CONTACT",
-        title: "聯絡我",
-        text: "如果你對我的專案、研究方向或合作有興趣，歡迎與我聯絡。",
+        title: "Contact Me",
+        text: "Feel free to reach out if you are interested in my projects, research direction, or potential collaboration.",
         emailLabel: "EMAIL",
         instagramLabel: "INSTAGRAM",
       },
