@@ -9,7 +9,7 @@ import gestureDemo from "./assets/images/projects/gesture-interaction/demo.gif";
 import exhibitionDetail1 from "./assets/images/projects/interactive-exhibition/detail-1.png";
 
 // discord-matching
-import discordDetail1 from "./assets/images/projects/discord-matching/detail-1.png";
+import discordDetail1 from "./assets/images/projects/discordMatching-detail-1.png";
 
 // leave-system
 import leaveDetail1 from "./assets/images/projects/leave-system/detail-1.png";
