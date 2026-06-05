@@ -1146,8 +1146,8 @@ export default function ProjectsPage() {
                     textAlign: "left",
                   }}
                 >
-                
-
+                  <div style={{ textAlign: "left" }}>
+                  
                     <h2
                       style={{
                         margin: "0 0 14px 0",
