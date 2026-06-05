@@ -196,7 +196,7 @@ export default function ProjectsPage() {
             {
               heading: "我的解法",
               body: [
-                "透過 Google Sheets、Apps Script 與 Google OAuth 驗證，",
+                "透過 Google Sheets、Apps Script，",
                 "參展者登入後，\n系統會確認身分並記住登入狀態。",
                 "每位參展者可自行新增邀請對象，\n並即時查看目前名單內容。",
                 "後台則能同步掌握邀請關係，\n清楚知道每位受邀者的來源。",
@@ -505,7 +505,7 @@ export default function ProjectsPage() {
             {
               heading: "My Solution",
               body: [
-                "Using Google Sheets, Apps Script, and Google OAuth authentication,",
+                "Using Google Sheets, Apps Script,",
                 "after exhibitors log in,\nthe system verifies their identity and remembers the login status.",
                 "Each exhibitor can add their own invitees\nand view the current guest list in real time.",
                 "The backend can also track invitation relationships\nand clearly identify the source of each invited guest.",
