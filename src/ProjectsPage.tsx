@@ -385,7 +385,7 @@ export default function ProjectsPage() {
               body: [
                 "從主題出發，",
                 "思考如何將內容轉譯為可互動的體驗。",
-                "過去主題包含：\n\n• AI × 音樂（Suno）\n• 英文對話社群\n• 瑪雅圖騰\n• 超乎常理的款待設計",
+                "過去主題包含：\n\n• AI × 音樂（Suno）\n• 英文對話社群\n• 瑪雅圖騰\n• Life Coach情緒覺察",
                 "讓參與者在活動過程中實際參與，\n而非只是被動接收。",
               ],
             },
@@ -712,7 +712,7 @@ export default function ProjectsPage() {
               body: [
                 "Starting from each theme,",
                 "I think about how to translate the content into an interactive experience.",
-                "Past themes include:\n\n• AI × Music (Suno)\n• English conversation community\n• Mayan totems\n• Unexpected hospitality design",
+                "Past themes include:\n\n• AI × Music (Suno)\n• English conversation community\n• Mayan totems\n• Life Coach Emotional Insights",
                 "Participants are encouraged to take part in the process,\nrather than only receiving information passively.",
               ],
             },
