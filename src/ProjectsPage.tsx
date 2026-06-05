@@ -1146,24 +1146,7 @@ export default function ProjectsPage() {
                     textAlign: "left",
                   }}
                 >
-                  <div style={{ textAlign: "left" }}>
-                    <div
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "8px",
-                        padding: "7px 12px",
-                        borderRadius: "999px",
-                        backgroundColor: `${project.accent}18`,
-                        color: "#5f584f",
-                        fontSize: "12px",
-                        fontWeight: 700,
-                        letterSpacing: "0.04em",
-                        marginBottom: "14px",
-                      }}
-                    >
-                      {t.categoryLabel}：{project.tag}
-                    </div>
+                
 
                     <h2
                       style={{
